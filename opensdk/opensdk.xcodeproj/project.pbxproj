@@ -7,9 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8059120FC06E9660182274A5 /* libPods-opensdkTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F2A7237B78E614469ACE1D /* libPods-opensdkTests.a */; };
+		C280076B213966030037B235 /* OpenSDKAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C280075D213966030037B235 /* OpenSDKAPI.swift */; };
+		C280076C213966030037B235 /* OpenSDKService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C280075F213966030037B235 /* OpenSDKService.swift */; };
+		C280076D213966030037B235 /* OpenSDKProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2800760213966030037B235 /* OpenSDKProvider.swift */; };
+		C280076E213966030037B235 /* OpenSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2800761213966030037B235 /* OpenSDK.swift */; };
+		C280076F213966030037B235 /* Fee.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2800763213966030037B235 /* Fee.swift */; };
+		C2800770213966030037B235 /* WalletCoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2800764213966030037B235 /* WalletCoin.swift */; };
+		C2800771213966030037B235 /* Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2800765213966030037B235 /* Snapshot.swift */; };
+		C2800772213966030037B235 /* SwiftJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2800766213966030037B235 /* SwiftJSON.swift */; };
+		C2800773213966030037B235 /* Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2800767213966030037B235 /* Lists.swift */; };
+		C2800774213966030037B235 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2800768213966030037B235 /* Asset.swift */; };
+		C2800775213966030037B235 /* SecureData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C280076A213966030037B235 /* SecureData.swift */; };
+		C2800777213966210037B235 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2800776213966210037B235 /* Network.swift */; };
 		C2B35AB22138227B0072B077 /* opensdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2B35AA82138227B0072B077 /* opensdk.framework */; };
 		C2B35AB72138227B0072B077 /* opensdkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B35AB62138227B0072B077 /* opensdkTests.swift */; };
 		C2B35AB92138227B0072B077 /* opensdk.h in Headers */ = {isa = PBXBuildFile; fileRef = C2B35AAB2138227B0072B077 /* opensdk.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9C7BF5F416F9D32DEB54829 /* libPods-opensdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9EA87C5EA4DCC3D6643E7E /* libPods-opensdk.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +37,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0CAC622A432F1ABBBBF28FC4 /* Pods-opensdkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-opensdkTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-opensdkTests/Pods-opensdkTests.debug.xcconfig"; sourceTree = "<group>"; };
+		22A5BCDE81B163FEF9B1664E /* Pods-opensdk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-opensdk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-opensdk/Pods-opensdk.debug.xcconfig"; sourceTree = "<group>"; };
+		3867C264AABC57458CBD190B /* Pods-opensdkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-opensdkTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-opensdkTests/Pods-opensdkTests.release.xcconfig"; sourceTree = "<group>"; };
+		C280075D213966030037B235 /* OpenSDKAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenSDKAPI.swift; sourceTree = "<group>"; };
+		C280075F213966030037B235 /* OpenSDKService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenSDKService.swift; sourceTree = "<group>"; };
+		C2800760213966030037B235 /* OpenSDKProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenSDKProvider.swift; sourceTree = "<group>"; };
+		C2800761213966030037B235 /* OpenSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenSDK.swift; sourceTree = "<group>"; };
+		C2800763213966030037B235 /* Fee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fee.swift; sourceTree = "<group>"; };
+		C2800764213966030037B235 /* WalletCoin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletCoin.swift; sourceTree = "<group>"; };
+		C2800765213966030037B235 /* Snapshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Snapshot.swift; sourceTree = "<group>"; };
+		C2800766213966030037B235 /* SwiftJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftJSON.swift; sourceTree = "<group>"; };
+		C2800767213966030037B235 /* Lists.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lists.swift; sourceTree = "<group>"; };
+		C2800768213966030037B235 /* Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
+		C280076A213966030037B235 /* SecureData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureData.swift; sourceTree = "<group>"; };
+		C2800776213966210037B235 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Network.swift; path = opensdk/Network.swift; sourceTree = SOURCE_ROOT; };
 		C2B35AA82138227B0072B077 /* opensdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = opensdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2B35AAB2138227B0072B077 /* opensdk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = opensdk.h; sourceTree = "<group>"; };
 		C2B35AAC2138227B0072B077 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2B35AB12138227B0072B077 /* opensdkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = opensdkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2B35AB62138227B0072B077 /* opensdkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = opensdkTests.swift; sourceTree = "<group>"; };
 		C2B35AB82138227B0072B077 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9458189222F937E4A79F284 /* Pods-opensdk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-opensdk.release.xcconfig"; path = "Pods/Target Support Files/Pods-opensdk/Pods-opensdk.release.xcconfig"; sourceTree = "<group>"; };
+		E4F2A7237B78E614469ACE1D /* libPods-opensdkTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-opensdkTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB9EA87C5EA4DCC3D6643E7E /* libPods-opensdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-opensdk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9C7BF5F416F9D32DEB54829 /* libPods-opensdk.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,18 +77,81 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2B35AB22138227B0072B077 /* opensdk.framework in Frameworks */,
+				8059120FC06E9660182274A5 /* libPods-opensdkTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		478D7D2E828DF6212998DD6D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				22A5BCDE81B163FEF9B1664E /* Pods-opensdk.debug.xcconfig */,
+				C9458189222F937E4A79F284 /* Pods-opensdk.release.xcconfig */,
+				0CAC622A432F1ABBBBF28FC4 /* Pods-opensdkTests.debug.xcconfig */,
+				3867C264AABC57458CBD190B /* Pods-opensdkTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		54EEE047097A46E122FE7996 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB9EA87C5EA4DCC3D6643E7E /* libPods-opensdk.a */,
+				E4F2A7237B78E614469ACE1D /* libPods-opensdkTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C280075C213966030037B235 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				C280075D213966030037B235 /* OpenSDKAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		C280075E213966030037B235 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				C280075F213966030037B235 /* OpenSDKService.swift */,
+				C2800760213966030037B235 /* OpenSDKProvider.swift */,
+				C2800761213966030037B235 /* OpenSDK.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		C2800762213966030037B235 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C2800763213966030037B235 /* Fee.swift */,
+				C2800764213966030037B235 /* WalletCoin.swift */,
+				C2800765213966030037B235 /* Snapshot.swift */,
+				C2800766213966030037B235 /* SwiftJSON.swift */,
+				C2800767213966030037B235 /* Lists.swift */,
+				C2800768213966030037B235 /* Asset.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C2800769213966030037B235 /* Secure */ = {
+			isa = PBXGroup;
+			children = (
+				C2800776213966210037B235 /* Network.swift */,
+				C280076A213966030037B235 /* SecureData.swift */,
+			);
+			path = Secure;
+			sourceTree = "<group>";
+		};
 		C2B35A9E2138227B0072B077 = {
 			isa = PBXGroup;
 			children = (
 				C2B35AAA2138227B0072B077 /* opensdk */,
 				C2B35AB52138227B0072B077 /* opensdkTests */,
 				C2B35AA92138227B0072B077 /* Products */,
+				478D7D2E828DF6212998DD6D /* Pods */,
+				54EEE047097A46E122FE7996 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +167,10 @@
 		C2B35AAA2138227B0072B077 /* opensdk */ = {
 			isa = PBXGroup;
 			children = (
+				C280075C213966030037B235 /* API */,
+				C280075E213966030037B235 /* Interface */,
+				C2800762213966030037B235 /* Model */,
+				C2800769213966030037B235 /* Secure */,
 				C2B35AAB2138227B0072B077 /* opensdk.h */,
 				C2B35AAC2138227B0072B077 /* Info.plist */,
 			);
@@ -104,6 +204,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C2B35ABC2138227B0072B077 /* Build configuration list for PBXNativeTarget "opensdk" */;
 			buildPhases = (
+				F9309AC4C92E4AA5F64AA0C0 /* [CP] Check Pods Manifest.lock */,
 				C2B35AA32138227B0072B077 /* Sources */,
 				C2B35AA42138227B0072B077 /* Frameworks */,
 				C2B35AA52138227B0072B077 /* Headers */,
@@ -122,6 +223,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C2B35ABF2138227B0072B077 /* Build configuration list for PBXNativeTarget "opensdkTests" */;
 			buildPhases = (
+				DCF67495DAB1D8BCFFC135A9 /* [CP] Check Pods Manifest.lock */,
 				C2B35AAD2138227B0072B077 /* Sources */,
 				C2B35AAE2138227B0072B077 /* Frameworks */,
 				C2B35AAF2138227B0072B077 /* Resources */,
@@ -148,6 +250,7 @@
 				TargetAttributes = {
 					C2B35AA72138227B0072B077 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 					C2B35AB02138227B0072B077 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -189,11 +292,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		DCF67495DAB1D8BCFFC135A9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-opensdkTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9309AC4C92E4AA5F64AA0C0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-opensdk-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C2B35AA32138227B0072B077 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2800777213966210037B235 /* Network.swift in Sources */,
+				C280076E213966030037B235 /* OpenSDK.swift in Sources */,
+				C2800773213966030037B235 /* Lists.swift in Sources */,
+				C2800771213966030037B235 /* Snapshot.swift in Sources */,
+				C2800774213966030037B235 /* Asset.swift in Sources */,
+				C2800775213966030037B235 /* SecureData.swift in Sources */,
+				C280076C213966030037B235 /* OpenSDKService.swift in Sources */,
+				C2800770213966030037B235 /* WalletCoin.swift in Sources */,
+				C2800772213966030037B235 /* SwiftJSON.swift in Sources */,
+				C280076B213966030037B235 /* OpenSDKAPI.swift in Sources */,
+				C280076F213966030037B235 /* Fee.swift in Sources */,
+				C280076D213966030037B235 /* OpenSDKProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,7 +492,9 @@
 		};
 		C2B35ABD2138227B0072B077 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22A5BCDE81B163FEF9B1664E /* Pods-opensdk.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -356,6 +512,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = one.fox.opensdk;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -363,7 +520,9 @@
 		};
 		C2B35ABE2138227B0072B077 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9458189222F937E4A79F284 /* Pods-opensdk.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -388,7 +547,9 @@
 		};
 		C2B35AC02138227B0072B077 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CAC622A432F1ABBBBF28FC4 /* Pods-opensdkTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RD4GU69WG6;
 				INFOPLIST_FILE = opensdkTests/Info.plist;
@@ -406,7 +567,9 @@
 		};
 		C2B35AC12138227B0072B077 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3867C264AABC57458CBD190B /* Pods-opensdkTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RD4GU69WG6;
 				INFOPLIST_FILE = opensdkTests/Info.plist;
