@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8059120FC06E9660182274A5 /* libPods-opensdkTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F2A7237B78E614469ACE1D /* libPods-opensdkTests.a */; };
-		C258BA43213A4672002837C3 /* OpenSDK.strings in Resources */ = {isa = PBXBuildFile; fileRef = C258BA40213A4672002837C3 /* OpenSDK.strings */; };
+		C258BA71213A4920002837C3 /* OpenSDK.strings in Resources */ = {isa = PBXBuildFile; fileRef = C258BA70213A4920002837C3 /* OpenSDK.strings */; };
 		C280076B213966030037B235 /* OpenSDKAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C280075D213966030037B235 /* OpenSDKAPI.swift */; };
 		C280076C213966030037B235 /* OpenSDKService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C280075F213966030037B235 /* OpenSDKService.swift */; };
 		C280076D213966030037B235 /* OpenSDKProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2800760213966030037B235 /* OpenSDKProvider.swift */; };
@@ -21,7 +21,7 @@
 		C2800774213966030037B235 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2800768213966030037B235 /* Asset.swift */; };
 		C2800775213966030037B235 /* SecureData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C280076A213966030037B235 /* SecureData.swift */; };
 		C2800777213966210037B235 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2800776213966210037B235 /* Network.swift */; };
-		C2B35AB22138227B0072B077 /* opensdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2B35AA82138227B0072B077 /* opensdk.framework */; };
+		C2B35AB22138227B0072B077 /* FoxOneOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2B35AA82138227B0072B077 /* FoxOneOpenSDK.framework */; };
 		C2B35AB72138227B0072B077 /* opensdkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B35AB62138227B0072B077 /* opensdkTests.swift */; };
 		C2B35AB92138227B0072B077 /* opensdk.h in Headers */ = {isa = PBXBuildFile; fileRef = C2B35AAB2138227B0072B077 /* opensdk.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E9C7BF5F416F9D32DEB54829 /* libPods-opensdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9EA87C5EA4DCC3D6643E7E /* libPods-opensdk.a */; };
@@ -41,8 +41,7 @@
 		0CAC622A432F1ABBBBF28FC4 /* Pods-opensdkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-opensdkTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-opensdkTests/Pods-opensdkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		22A5BCDE81B163FEF9B1664E /* Pods-opensdk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-opensdk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-opensdk/Pods-opensdk.debug.xcconfig"; sourceTree = "<group>"; };
 		3867C264AABC57458CBD190B /* Pods-opensdkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-opensdkTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-opensdkTests/Pods-opensdkTests.release.xcconfig"; sourceTree = "<group>"; };
-		C258BA41213A4672002837C3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/OpenSDK.strings"; sourceTree = "<group>"; };
-		C258BA42213A4672002837C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/OpenSDK.strings; sourceTree = "<group>"; };
+		C258BA70213A4920002837C3 /* OpenSDK.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = OpenSDK.strings; sourceTree = "<group>"; };
 		C280075D213966030037B235 /* OpenSDKAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenSDKAPI.swift; sourceTree = "<group>"; };
 		C280075F213966030037B235 /* OpenSDKService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenSDKService.swift; sourceTree = "<group>"; };
 		C2800760213966030037B235 /* OpenSDKProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenSDKProvider.swift; sourceTree = "<group>"; };
@@ -55,7 +54,7 @@
 		C2800768213966030037B235 /* Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		C280076A213966030037B235 /* SecureData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureData.swift; sourceTree = "<group>"; };
 		C2800776213966210037B235 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Network.swift; path = opensdk/Network.swift; sourceTree = SOURCE_ROOT; };
-		C2B35AA82138227B0072B077 /* opensdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = opensdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2B35AA82138227B0072B077 /* FoxOneOpenSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FoxOneOpenSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2B35AAB2138227B0072B077 /* opensdk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = opensdk.h; sourceTree = "<group>"; };
 		C2B35AAC2138227B0072B077 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2B35AB12138227B0072B077 /* opensdkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = opensdkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,7 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2B35AB22138227B0072B077 /* opensdk.framework in Frameworks */,
+				C2B35AB22138227B0072B077 /* FoxOneOpenSDK.framework in Frameworks */,
 				8059120FC06E9660182274A5 /* libPods-opensdkTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -110,7 +109,7 @@
 		C258BA3F213A4672002837C3 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				C258BA40213A4672002837C3 /* OpenSDK.strings */,
+				C258BA70213A4920002837C3 /* OpenSDK.strings */,
 			);
 			name = Resource;
 			path = "../../../FoxOne/foxone-ios/Wallet/Core/Resource";
@@ -170,7 +169,7 @@
 		C2B35AA92138227B0072B077 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C2B35AA82138227B0072B077 /* opensdk.framework */,
+				C2B35AA82138227B0072B077 /* FoxOneOpenSDK.framework */,
 				C2B35AB12138227B0072B077 /* opensdkTests.xctest */,
 			);
 			name = Products;
@@ -213,9 +212,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		C2B35AA72138227B0072B077 /* opensdk */ = {
+		C2B35AA72138227B0072B077 /* FoxOneOpenSDK */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C2B35ABC2138227B0072B077 /* Build configuration list for PBXNativeTarget "opensdk" */;
+			buildConfigurationList = C2B35ABC2138227B0072B077 /* Build configuration list for PBXNativeTarget "FoxOneOpenSDK" */;
 			buildPhases = (
 				F9309AC4C92E4AA5F64AA0C0 /* [CP] Check Pods Manifest.lock */,
 				C2B35AA32138227B0072B077 /* Sources */,
@@ -227,9 +226,9 @@
 			);
 			dependencies = (
 			);
-			name = opensdk;
+			name = FoxOneOpenSDK;
 			productName = opensdk;
-			productReference = C2B35AA82138227B0072B077 /* opensdk.framework */;
+			productReference = C2B35AA82138227B0072B077 /* FoxOneOpenSDK.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		C2B35AB02138227B0072B077 /* opensdkTests */ = {
@@ -283,7 +282,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C2B35AA72138227B0072B077 /* opensdk */,
+				C2B35AA72138227B0072B077 /* FoxOneOpenSDK */,
 				C2B35AB02138227B0072B077 /* opensdkTests */,
 			);
 		};
@@ -294,7 +293,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C258BA43213A4672002837C3 /* OpenSDK.strings in Resources */,
+				C258BA71213A4920002837C3 /* OpenSDK.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,22 +378,10 @@
 /* Begin PBXTargetDependency section */
 		C2B35AB42138227B0072B077 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C2B35AA72138227B0072B077 /* opensdk */;
+			target = C2B35AA72138227B0072B077 /* FoxOneOpenSDK */;
 			targetProxy = C2B35AB32138227B0072B077 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		C258BA40213A4672002837C3 /* OpenSDK.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C258BA41213A4672002837C3 /* zh-Hans */,
-				C258BA42213A4672002837C3 /* en */,
-			);
-			name = OpenSDK.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C2B35ABA2138227B0072B077 /* Debug */ = {
@@ -626,7 +613,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C2B35ABC2138227B0072B077 /* Build configuration list for PBXNativeTarget "opensdk" */ = {
+		C2B35ABC2138227B0072B077 /* Build configuration list for PBXNativeTarget "FoxOneOpenSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C2B35ABD2138227B0072B077 /* Debug */,
