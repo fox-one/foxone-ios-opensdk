@@ -11,16 +11,19 @@ import Alamofire
 import SwiftyJSON
 
 class AccessTokenAdapter: RequestAdapter {
-    init() {
-    }
+    init() {}
     
     func adapt(_ urlRequest: URLRequest) throws -> URLRequest {
         var urlRequest = urlRequest
         
         if let urlString = urlRequest.url?.absoluteString, urlString.hasPrefix(OpenSDK.shared.baseURL) {
-            let accessToken = OpenSDK.shared.delegate?.accessToken() ?? ""
+            let accessToken = OpenSDK.shared.delegate?.f1AccessToken() ?? ""
             urlRequest.setValue("Bearer " + accessToken, forHTTPHeaderField: "Authorization")
-            urlRequest.setValue("5", forHTTPHeaderField: "x-client-type")
+            if let header = OpenSDK.shared.delegate?.f1HttpHeader() {
+                header.forEach { key, value in
+                    urlRequest.setValue(value, forHTTPHeaderField: key)
+                }
+            }
         }
         
         return urlRequest
@@ -47,6 +50,10 @@ final class NetworkManager {
                 if acceptableStatusCodes.contains(response.statusCode) {
                     return .success
                 } else {
+                    guard let data = data else {
+                        return .failure(ErrorCode.dataError)
+                    }
+                    
                     let json = JSON(data)
                     let statusCode = json["code"].intValue
                     return .failure(OpenSDKError.error(code: statusCode, message: ErrorCode.errorMessage(for: statusCode) ?? json["msg"].stringValue))

@@ -36,7 +36,7 @@ extension SecureData {
 extension String {
     var rsaToken: String? {
         do {
-            let publicKey = try PublicKey(pemEncoded: OpenSDK.shared.delegate?.publicKey() ?? "")
+            let publicKey = try PublicKey(pemEncoded: OpenSDK.shared.delegate?.f1PublicKey() ?? "")
             let clear = try ClearMessage(string: self, using: .utf8)
             let encrypted = try clear.encrypted(with: publicKey, padding: .OAEP)
             #if DEBUG

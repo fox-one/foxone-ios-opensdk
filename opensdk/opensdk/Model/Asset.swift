@@ -10,6 +10,7 @@ import Foundation
 
 /// 资产
 public struct Asset: Codable {
+    
     public let id: String
     public let balance: Double
     public let chainId: String
@@ -27,19 +28,4 @@ public struct Asset: Codable {
     public let accountTag: String
     public let chain: WalletCoin?
     public let coin: WalletCoin?
-
-    public var userUSDAsset: Double {
-        return priceUSD * balance
-    }
-
-    public var userBTCAsset: Double {
-        return priceBTC * balance
-    }
-
-    public var oldPrices: Double {
-        if self.changeUsdPercentage == -1.0 {
-            return self.priceUSD
-        }
-        return self.priceUSD / (1.0 + self.changeUsdPercentage)
-    }
 }

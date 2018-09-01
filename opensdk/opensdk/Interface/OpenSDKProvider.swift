@@ -14,25 +14,34 @@ public enum OpenSDKError: Swift.Error {
 }
 
 public struct ErrorCode {
+    static let bundle = Bundle(for: OpenSDK.self)
+    
     let errorCode = [
-        1: NSLocalizedString("INVALID_OPERATION_MSG", comment: ""),
-        2: NSLocalizedString("UNKNOWN_ERROR_MSG", comment: ""),
-        3: NSLocalizedString("SERVER_FALUT_MSG", comment: ""),
-        4: NSLocalizedString("login_err_frequently", comment: ""),
-        6: NSLocalizedString("FORBIDDEN_MSG", comment: ""),
-        1538: NSLocalizedString("user_not_found", comment: ""),
-        1537: NSLocalizedString("USER_NOT_LOGGED_IN_MSG", comment: ""),
-        1553: NSLocalizedString("pin_not_set_message", comment: ""),
-        1554: NSLocalizedString("incorrect_pin_message", comment: ""),
-        1560: NSLocalizedString("MIXIN_BIND_WITH_OTHER_USER_MSG", comment: ""),
-        1561: NSLocalizedString("MIXIN_NOT_BIND_WITH_USER_MSG", comment: ""),
-        1601: NSLocalizedString("invalid_public_key", tableName: "ErrorCode", comment: "invalid public key"),
-        2005: NSLocalizedString("invalid_amount", tableName: "ErrorCode", comment: "invalinvalid_amountid_nickname"),
-        2006: NSLocalizedString("amount_too_small", tableName: "ErrorCode", comment: "amount_too_small"),
-        -1: NSLocalizedString("address_unavaliable", tableName: "ErrorCode", comment: "address_unavaliable")
+        1: "INVALID_OPERATION_MSG".localizedIn(table: "OpenSDK", bundle: ErrorCode.bundle),
+        3:  "SERVER_FALUT_MSG" .localizedIn(table: "OpenSDK", bundle: ErrorCode.bundle),
+        1538:  "user_not_found" .localizedIn(table: "OpenSDK", bundle: ErrorCode.bundle),
+        1537:  "USER_NOT_LOGGED_IN_MSG" .localizedIn(table: "OpenSDK", bundle: ErrorCode.bundle),
+        1553:  "pin_not_set_message" .localizedIn(table: "OpenSDK", bundle: ErrorCode.bundle),
+        1554:  "incorrect_pin_message" .localizedIn(table: "OpenSDK", bundle: ErrorCode.bundle),
+        1560:  "MIXIN_BIND_WITH_OTHER_USER_MSG" .localizedIn(table: "OpenSDK", bundle: ErrorCode.bundle),
+        1561:  "MIXIN_NOT_BIND_WITH_USER_MSG" .localizedIn(table: "OpenSDK", bundle: ErrorCode.bundle),
+        1601:  "invalid_public_key".localizedIn(table: "OpenSDK", bundle: ErrorCode.bundle),
+        2005:  "invalid_amount".localizedIn(table: "OpenSDK", bundle: ErrorCode.bundle),
+        2006:  "amount_too_small".localizedIn(table: "OpenSDK", bundle: ErrorCode.bundle),
+        -1:  "address_unavaliable".localizedIn(table: "OpenSDK", bundle: ErrorCode.bundle),
+        -2:  "data_is_nil".localizedIn(table: "OpenSDK", bundle: ErrorCode.bundle)
     ]
 
-    public static func errorMessage(for code: Int) -> String? {
+    internal static func errorMessage(for code: Int) -> String? {
         return ErrorCode().errorCode[code]
+    }
+    
+    static var dataError = OpenSDKError.error(code: -2, message: "")
+}
+
+//LocalizedString
+fileprivate extension String {
+    func localizedIn(table: String, bundle: Bundle) -> String {
+        return NSLocalizedString(self, tableName: table, bundle:bundle, comment: "")
     }
 }
