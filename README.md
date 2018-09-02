@@ -9,10 +9,8 @@ Integrate your app with Fox.One open SDK, Including:
 * Transation Record
 * PIN
 
-# Installation
-——————
+# Installation    
+
+
 CocoaPods
 
-、、、
-gem install cocoapods
-、、、
