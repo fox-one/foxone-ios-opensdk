@@ -1,3 +1,7 @@
+#  OpenSDKProtcol
+
+
+```
 public protocol OpenSDKProtcol : NSObjectProtocol {
 
     /// AccessToken
@@ -12,7 +16,10 @@ public protocol OpenSDKProtcol : NSObjectProtocol {
     /// FoxOne 后端请求Header
     public func f1HttpHeader() -> [String : String]
 }
+```
 
+
+```
 public final class OpenSDK {
     /// 注册OpenSDK
     public static func setDelegate(_ delegate: OpenSDKProtcol)
@@ -30,7 +37,10 @@ public final class OpenSDK {
     public class func generatePinToken(with pin: String) -> String
 }
 
+```
 
+
+```
 public final class OpenSDKService {
 
     /// 获取所有资产的列表
@@ -126,3 +136,5 @@ public final class OpenSDKService {
     /// - Returns: 返回请求体
     public class func validatePin(pinToken: String, completion: (Result<Bool>) -> Void) -> DataRequest
 }
+
+```
