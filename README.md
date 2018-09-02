@@ -11,6 +11,17 @@ Integrate your app with Fox.One open SDK, Including:
 
 # Installation    
 
-
 CocoaPods
 
+
+# Dependencies
+
+Alamofire
+SwiftyJSON
+SwiftyRSA
+CryptoSwift
+
+
+# Using Open SDK
+
+Request API Key
