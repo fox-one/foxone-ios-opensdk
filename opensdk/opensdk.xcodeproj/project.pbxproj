@@ -50,13 +50,6 @@
 			remoteGlobalIDString = C2CDBA52213CD1D9006A5355;
 			remoteInfo = SDKDemo;
 		};
-		C2CDBA73213CD1E7006A5355 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C2B35A9F2138227B0072B077 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C2B35AA72138227B0072B077;
-			remoteInfo = FoxOneOpenSDK;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -344,11 +337,11 @@
 				C2CDBA4F213CD1D9006A5355 /* Sources */,
 				C2CDBA50213CD1D9006A5355 /* Frameworks */,
 				C2CDBA51213CD1D9006A5355 /* Resources */,
+				8793F4A68758E994C79FBEA4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C2CDBA74213CD1E7006A5355 /* PBXTargetDependency */,
 			);
 			name = SDKDemo;
 			productName = SDKDemo;
@@ -475,6 +468,29 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8793F4A68758E994C79FBEA4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SDKDemo/Pods-SDKDemo-resources.sh",
+				"${PODS_ROOT}/../opensdk/Resource/en.lproj/OpenSDK.strings",
+				"${PODS_ROOT}/../opensdk/Resource/zh-Hans.lproj/OpenSDK.strings",
+				"${PODS_ROOT}/../opensdk/Resource/en.lproj",
+				"${PODS_ROOT}/../opensdk/Resource/zh-Hans.lproj",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/OpenSDK.strings",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/en.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/zh-Hans.lproj",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SDKDemo/Pods-SDKDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		DCF67495DAB1D8BCFFC135A9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -570,11 +586,6 @@
 			isa = PBXTargetDependency;
 			target = C2CDBA52213CD1D9006A5355 /* SDKDemo */;
 			targetProxy = C2CDBA67213CD1DA006A5355 /* PBXContainerItemProxy */;
-		};
-		C2CDBA74213CD1E7006A5355 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C2B35AA72138227B0072B077 /* FoxOneOpenSDK */;
-			targetProxy = C2CDBA73213CD1E7006A5355 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

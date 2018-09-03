@@ -7,25 +7,28 @@
 //
 
 import Foundation
+import UIKit
 
 public protocol OpenSDKProtcol: NSObjectProtocol {
     /// AccessToken
     func f1AccessToken() -> String
     /// PIN加密使用的公钥匙
     func f1PublicKey() -> String
-    /// FoxOne 钱包地址
-    func f1HostURLString() -> String
-    /// FoxOne 后端请求Header
-    func f1HttpHeader() -> [String: String]
+    
+    /// PIN
+    func f1Pin() -> String
+
 }
 
 public final class OpenSDK {
     internal static let shared = OpenSDK()
+    internal let sdkverison: String = "0.0.1"
+    internal let hostURLString = "https://ali-api.lyricwei.cn/api"
     internal var baseURL: String {
-        return self.delegate?.f1HostURLString() ?? ""
+        return hostURLString
     }
 
-    public weak var delegate: OpenSDKProtcol?
+    internal weak var delegate: OpenSDKProtcol?
 
     init() {}
     /// 注册OpenSDK
@@ -48,5 +51,18 @@ public final class OpenSDK {
     /// - Returns: PinToken
     public class func generatePinToken(with pin: String) -> String {
         return SecureData(key: pin).jsonString?.rsaToken ?? ""
+    }
+    
+    internal func httpHeader() -> [String: String] {
+        let buildVersion = "0"
+        let appVersion = self.sdkverison
+        let clientType = "5"
+        let uuid = UIDevice.current.identifierForVendor?.uuidString ?? ""
+        
+        return ["x-client-build": buildVersion,
+                                                     "x-client-type": clientType,
+                                                     "x-client-version": appVersion,
+                                                     "x-client-device-id": uuid
+            ]
     }
 }

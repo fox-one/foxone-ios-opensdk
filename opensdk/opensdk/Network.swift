@@ -19,10 +19,14 @@ class AccessTokenAdapter: RequestAdapter {
         if let urlString = urlRequest.url?.absoluteString, urlString.hasPrefix(OpenSDK.shared.baseURL) {
             let accessToken = OpenSDK.shared.delegate?.f1AccessToken() ?? ""
             urlRequest.setValue("Bearer " + accessToken, forHTTPHeaderField: "Authorization")
-            if let header = OpenSDK.shared.delegate?.f1HttpHeader() {
-                header.forEach { key, value in
-                    urlRequest.setValue(value, forHTTPHeaderField: key)
-                }
+            
+            let header = OpenSDK.shared.httpHeader()
+            header.forEach { key, value in
+                urlRequest.setValue(value, forHTTPHeaderField: key)
+            }
+            
+            if let pin = OpenSDK.shared.delegate?.f1Pin() {
+                urlRequest.setValue(pin, forHTTPHeaderField: "fox-client-pin")
             }
         }
         

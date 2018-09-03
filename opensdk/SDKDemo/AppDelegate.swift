@@ -14,7 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         OpenSDK.setDelegate(self)
         return true
@@ -30,17 +29,8 @@ extension AppDelegate: OpenSDKProtcol {
         return ""
     }
     
-    func f1HostURLString() -> String {
-        return "baseURL"
-    }
-    
-    func f1HttpHeader() -> [String: String] {
-       
-        
-        return ["x-client-build": "buildVersion",
-                "x-client-type": "clientType",
-                "x-client-version": "appVersion",
-                "x-client-device-id": "uuid"]
+    func f1Pin() -> String {
+        return ""
     }
     
 }

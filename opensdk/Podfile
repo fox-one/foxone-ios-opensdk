@@ -23,6 +23,7 @@ target 'SDKDemo' do
     pod 'SwiftyRSA'
     pod 'Alamofire'
     pod 'SwiftyJSON'
+    pod 'FoxOneOpenSDK', :path => '../'
     
 end
 
