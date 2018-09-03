@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5980331741590C7D07C28A70 /* libPods-FoxOneOpenSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B58549EEA0BCFB117164D60 /* libPods-FoxOneOpenSDK.a */; };
 		8059120FC06E9660182274A5 /* libPods-opensdkTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F2A7237B78E614469ACE1D /* libPods-opensdkTests.a */; };
-		C258BA71213A4920002837C3 /* OpenSDK.strings in Resources */ = {isa = PBXBuildFile; fileRef = C258BA70213A4920002837C3 /* OpenSDK.strings */; };
+		B8FE1A28122F3554A4CAF202 /* libPods-SDKDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DB409070C39B542DDFE40DA /* libPods-SDKDemo.a */; };
 		C280076B213966030037B235 /* OpenSDKAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C280075D213966030037B235 /* OpenSDKAPI.swift */; };
 		C280076C213966030037B235 /* OpenSDKService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C280075F213966030037B235 /* OpenSDKService.swift */; };
 		C280076D213966030037B235 /* OpenSDKProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2800760213966030037B235 /* OpenSDKProvider.swift */; };
@@ -24,6 +25,13 @@
 		C2B35AB22138227B0072B077 /* FoxOneOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2B35AA82138227B0072B077 /* FoxOneOpenSDK.framework */; };
 		C2B35AB72138227B0072B077 /* opensdkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B35AB62138227B0072B077 /* opensdkTests.swift */; };
 		C2B35AB92138227B0072B077 /* opensdk.h in Headers */ = {isa = PBXBuildFile; fileRef = C2B35AAB2138227B0072B077 /* opensdk.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2CDBA56213CD1D9006A5355 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CDBA55213CD1D9006A5355 /* AppDelegate.swift */; };
+		C2CDBA58213CD1D9006A5355 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CDBA57213CD1D9006A5355 /* ViewController.swift */; };
+		C2CDBA5B213CD1D9006A5355 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2CDBA59213CD1D9006A5355 /* Main.storyboard */; };
+		C2CDBA5D213CD1DA006A5355 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2CDBA5C213CD1DA006A5355 /* Assets.xcassets */; };
+		C2CDBA60213CD1DA006A5355 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2CDBA5E213CD1DA006A5355 /* LaunchScreen.storyboard */; };
+		C2CDBA6B213CD1DA006A5355 /* SDKDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CDBA6A213CD1DA006A5355 /* SDKDemoTests.swift */; };
+		C2CDBA7A213CD23B006A5355 /* OpenSDK.strings in Resources */ = {isa = PBXBuildFile; fileRef = C2CDBA77213CD23B006A5355 /* OpenSDK.strings */; };
 		E9C7BF5F416F9D32DEB54829 /* libPods-opensdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9EA87C5EA4DCC3D6643E7E /* libPods-opensdk.a */; };
 /* End PBXBuildFile section */
 
@@ -35,13 +43,32 @@
 			remoteGlobalIDString = C2B35AA72138227B0072B077;
 			remoteInfo = opensdk;
 		};
+		C2CDBA67213CD1DA006A5355 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2B35A9F2138227B0072B077 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2CDBA52213CD1D9006A5355;
+			remoteInfo = SDKDemo;
+		};
+		C2CDBA73213CD1E7006A5355 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2B35A9F2138227B0072B077 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2B35AA72138227B0072B077;
+			remoteInfo = FoxOneOpenSDK;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06D76C23DACC914DC40D15FC /* Pods-SDKDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDKDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SDKDemo/Pods-SDKDemo.release.xcconfig"; sourceTree = "<group>"; };
 		0CAC622A432F1ABBBBF28FC4 /* Pods-opensdkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-opensdkTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-opensdkTests/Pods-opensdkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		22A5BCDE81B163FEF9B1664E /* Pods-opensdk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-opensdk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-opensdk/Pods-opensdk.debug.xcconfig"; sourceTree = "<group>"; };
+		29E0F24890A7166C7CFCAC88 /* Pods-SDKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDKDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SDKDemo/Pods-SDKDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		3867C264AABC57458CBD190B /* Pods-opensdkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-opensdkTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-opensdkTests/Pods-opensdkTests.release.xcconfig"; sourceTree = "<group>"; };
-		C258BA70213A4920002837C3 /* OpenSDK.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = OpenSDK.strings; sourceTree = "<group>"; };
+		4B58549EEA0BCFB117164D60 /* libPods-FoxOneOpenSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FoxOneOpenSDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DB409070C39B542DDFE40DA /* libPods-SDKDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SDKDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F42B597AAFC63FA606AB207 /* Pods-FoxOneOpenSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoxOneOpenSDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoxOneOpenSDK/Pods-FoxOneOpenSDK.debug.xcconfig"; sourceTree = "<group>"; };
+		AFDCC16F67FD1FA651494A0F /* Pods-FoxOneOpenSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoxOneOpenSDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoxOneOpenSDK/Pods-FoxOneOpenSDK.release.xcconfig"; sourceTree = "<group>"; };
 		C280075D213966030037B235 /* OpenSDKAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenSDKAPI.swift; sourceTree = "<group>"; };
 		C280075F213966030037B235 /* OpenSDKService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenSDKService.swift; sourceTree = "<group>"; };
 		C2800760213966030037B235 /* OpenSDKProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenSDKProvider.swift; sourceTree = "<group>"; };
@@ -60,6 +87,18 @@
 		C2B35AB12138227B0072B077 /* opensdkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = opensdkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2B35AB62138227B0072B077 /* opensdkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = opensdkTests.swift; sourceTree = "<group>"; };
 		C2B35AB82138227B0072B077 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2CDBA53213CD1D9006A5355 /* SDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2CDBA55213CD1D9006A5355 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C2CDBA57213CD1D9006A5355 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C2CDBA5A213CD1D9006A5355 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C2CDBA5C213CD1DA006A5355 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C2CDBA5F213CD1DA006A5355 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C2CDBA61213CD1DA006A5355 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2CDBA66213CD1DA006A5355 /* SDKDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDKDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2CDBA6A213CD1DA006A5355 /* SDKDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKDemoTests.swift; sourceTree = "<group>"; };
+		C2CDBA6C213CD1DA006A5355 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2CDBA78213CD23B006A5355 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/OpenSDK.strings"; sourceTree = "<group>"; };
+		C2CDBA79213CD23B006A5355 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/OpenSDK.strings; sourceTree = "<group>"; };
 		C9458189222F937E4A79F284 /* Pods-opensdk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-opensdk.release.xcconfig"; path = "Pods/Target Support Files/Pods-opensdk/Pods-opensdk.release.xcconfig"; sourceTree = "<group>"; };
 		E4F2A7237B78E614469ACE1D /* libPods-opensdkTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-opensdkTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB9EA87C5EA4DCC3D6643E7E /* libPods-opensdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-opensdk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +110,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9C7BF5F416F9D32DEB54829 /* libPods-opensdk.a in Frameworks */,
+				5980331741590C7D07C28A70 /* libPods-FoxOneOpenSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +120,21 @@
 			files = (
 				C2B35AB22138227B0072B077 /* FoxOneOpenSDK.framework in Frameworks */,
 				8059120FC06E9660182274A5 /* libPods-opensdkTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2CDBA50213CD1D9006A5355 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8FE1A28122F3554A4CAF202 /* libPods-SDKDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2CDBA63213CD1DA006A5355 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +148,10 @@
 				C9458189222F937E4A79F284 /* Pods-opensdk.release.xcconfig */,
 				0CAC622A432F1ABBBBF28FC4 /* Pods-opensdkTests.debug.xcconfig */,
 				3867C264AABC57458CBD190B /* Pods-opensdkTests.release.xcconfig */,
+				8F42B597AAFC63FA606AB207 /* Pods-FoxOneOpenSDK.debug.xcconfig */,
+				AFDCC16F67FD1FA651494A0F /* Pods-FoxOneOpenSDK.release.xcconfig */,
+				29E0F24890A7166C7CFCAC88 /* Pods-SDKDemo.debug.xcconfig */,
+				06D76C23DACC914DC40D15FC /* Pods-SDKDemo.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -102,17 +161,10 @@
 			children = (
 				EB9EA87C5EA4DCC3D6643E7E /* libPods-opensdk.a */,
 				E4F2A7237B78E614469ACE1D /* libPods-opensdkTests.a */,
+				4B58549EEA0BCFB117164D60 /* libPods-FoxOneOpenSDK.a */,
+				4DB409070C39B542DDFE40DA /* libPods-SDKDemo.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C258BA3F213A4672002837C3 /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-				C258BA70213A4920002837C3 /* OpenSDK.strings */,
-			);
-			name = Resource;
-			path = "../../../FoxOne/foxone-ios/Wallet/Core/Resource";
 			sourceTree = "<group>";
 		};
 		C280075C213966030037B235 /* API */ = {
@@ -160,6 +212,8 @@
 			children = (
 				C2B35AAA2138227B0072B077 /* opensdk */,
 				C2B35AB52138227B0072B077 /* opensdkTests */,
+				C2CDBA54213CD1D9006A5355 /* SDKDemo */,
+				C2CDBA69213CD1DA006A5355 /* SDKDemoTests */,
 				C2B35AA92138227B0072B077 /* Products */,
 				478D7D2E828DF6212998DD6D /* Pods */,
 				54EEE047097A46E122FE7996 /* Frameworks */,
@@ -171,6 +225,8 @@
 			children = (
 				C2B35AA82138227B0072B077 /* FoxOneOpenSDK.framework */,
 				C2B35AB12138227B0072B077 /* opensdkTests.xctest */,
+				C2CDBA53213CD1D9006A5355 /* SDKDemo.app */,
+				C2CDBA66213CD1DA006A5355 /* SDKDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -178,7 +234,7 @@
 		C2B35AAA2138227B0072B077 /* opensdk */ = {
 			isa = PBXGroup;
 			children = (
-				C258BA3F213A4672002837C3 /* Resource */,
+				C2CDBA75213CD23B006A5355 /* Resource */,
 				C280075C213966030037B235 /* API */,
 				C280075E213966030037B235 /* Interface */,
 				C2800762213966030037B235 /* Model */,
@@ -196,6 +252,36 @@
 				C2B35AB82138227B0072B077 /* Info.plist */,
 			);
 			path = opensdkTests;
+			sourceTree = "<group>";
+		};
+		C2CDBA54213CD1D9006A5355 /* SDKDemo */ = {
+			isa = PBXGroup;
+			children = (
+				C2CDBA55213CD1D9006A5355 /* AppDelegate.swift */,
+				C2CDBA57213CD1D9006A5355 /* ViewController.swift */,
+				C2CDBA59213CD1D9006A5355 /* Main.storyboard */,
+				C2CDBA5C213CD1DA006A5355 /* Assets.xcassets */,
+				C2CDBA5E213CD1DA006A5355 /* LaunchScreen.storyboard */,
+				C2CDBA61213CD1DA006A5355 /* Info.plist */,
+			);
+			path = SDKDemo;
+			sourceTree = "<group>";
+		};
+		C2CDBA69213CD1DA006A5355 /* SDKDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				C2CDBA6A213CD1DA006A5355 /* SDKDemoTests.swift */,
+				C2CDBA6C213CD1DA006A5355 /* Info.plist */,
+			);
+			path = SDKDemoTests;
+			sourceTree = "<group>";
+		};
+		C2CDBA75213CD23B006A5355 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				C2CDBA77213CD23B006A5355 /* OpenSDK.strings */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +336,43 @@
 			productReference = C2B35AB12138227B0072B077 /* opensdkTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		C2CDBA52213CD1D9006A5355 /* SDKDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2CDBA71213CD1DA006A5355 /* Build configuration list for PBXNativeTarget "SDKDemo" */;
+			buildPhases = (
+				85BC1B0505A32B273A999954 /* [CP] Check Pods Manifest.lock */,
+				C2CDBA4F213CD1D9006A5355 /* Sources */,
+				C2CDBA50213CD1D9006A5355 /* Frameworks */,
+				C2CDBA51213CD1D9006A5355 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2CDBA74213CD1E7006A5355 /* PBXTargetDependency */,
+			);
+			name = SDKDemo;
+			productName = SDKDemo;
+			productReference = C2CDBA53213CD1D9006A5355 /* SDKDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C2CDBA65213CD1DA006A5355 /* SDKDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2CDBA72213CD1DA006A5355 /* Build configuration list for PBXNativeTarget "SDKDemoTests" */;
+			buildPhases = (
+				C2CDBA62213CD1DA006A5355 /* Sources */,
+				C2CDBA63213CD1DA006A5355 /* Frameworks */,
+				C2CDBA64213CD1DA006A5355 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2CDBA68213CD1DA006A5355 /* PBXTargetDependency */,
+			);
+			name = SDKDemoTests;
+			productName = SDKDemoTests;
+			productReference = C2CDBA66213CD1DA006A5355 /* SDKDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -267,6 +390,13 @@
 					C2B35AB02138227B0072B077 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
+					C2CDBA52213CD1D9006A5355 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					C2CDBA65213CD1DA006A5355 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = C2CDBA52213CD1D9006A5355;
+					};
 				};
 			};
 			buildConfigurationList = C2B35AA22138227B0072B077 /* Build configuration list for PBXProject "opensdk" */;
@@ -276,6 +406,7 @@
 			knownRegions = (
 				en,
 				"zh-Hans",
+				Base,
 			);
 			mainGroup = C2B35A9E2138227B0072B077;
 			productRefGroup = C2B35AA92138227B0072B077 /* Products */;
@@ -284,6 +415,8 @@
 			targets = (
 				C2B35AA72138227B0072B077 /* FoxOneOpenSDK */,
 				C2B35AB02138227B0072B077 /* opensdkTests */,
+				C2CDBA52213CD1D9006A5355 /* SDKDemo */,
+				C2CDBA65213CD1DA006A5355 /* SDKDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -293,7 +426,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C258BA71213A4920002837C3 /* OpenSDK.strings in Resources */,
+				C2CDBA7A213CD23B006A5355 /* OpenSDK.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,9 +437,44 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C2CDBA51213CD1D9006A5355 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2CDBA60213CD1DA006A5355 /* LaunchScreen.storyboard in Resources */,
+				C2CDBA5D213CD1DA006A5355 /* Assets.xcassets in Resources */,
+				C2CDBA5B213CD1D9006A5355 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2CDBA64213CD1DA006A5355 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		85BC1B0505A32B273A999954 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SDKDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		DCF67495DAB1D8BCFFC135A9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -336,7 +504,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-opensdk-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-FoxOneOpenSDK-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -373,6 +541,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C2CDBA4F213CD1D9006A5355 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2CDBA58213CD1D9006A5355 /* ViewController.swift in Sources */,
+				C2CDBA56213CD1D9006A5355 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2CDBA62213CD1DA006A5355 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2CDBA6B213CD1DA006A5355 /* SDKDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -381,7 +566,45 @@
 			target = C2B35AA72138227B0072B077 /* FoxOneOpenSDK */;
 			targetProxy = C2B35AB32138227B0072B077 /* PBXContainerItemProxy */;
 		};
+		C2CDBA68213CD1DA006A5355 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C2CDBA52213CD1D9006A5355 /* SDKDemo */;
+			targetProxy = C2CDBA67213CD1DA006A5355 /* PBXContainerItemProxy */;
+		};
+		C2CDBA74213CD1E7006A5355 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C2B35AA72138227B0072B077 /* FoxOneOpenSDK */;
+			targetProxy = C2CDBA73213CD1E7006A5355 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C2CDBA59213CD1D9006A5355 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C2CDBA5A213CD1D9006A5355 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C2CDBA5E213CD1DA006A5355 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C2CDBA5F213CD1DA006A5355 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C2CDBA77213CD23B006A5355 /* OpenSDK.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C2CDBA78213CD23B006A5355 /* zh-Hans */,
+				C2CDBA79213CD23B006A5355 /* en */,
+			);
+			name = OpenSDK.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C2B35ABA2138227B0072B077 /* Debug */ = {
@@ -506,7 +729,7 @@
 		};
 		C2B35ABD2138227B0072B077 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 22A5BCDE81B163FEF9B1664E /* Pods-opensdk.debug.xcconfig */;
+			baseConfigurationReference = 8F42B597AAFC63FA606AB207 /* Pods-FoxOneOpenSDK.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -535,7 +758,7 @@
 		};
 		C2B35ABE2138227B0072B077 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C9458189222F937E4A79F284 /* Pods-opensdk.release.xcconfig */;
+			baseConfigurationReference = AFDCC16F67FD1FA651494A0F /* Pods-FoxOneOpenSDK.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -601,6 +824,88 @@
 			};
 			name = Release;
 		};
+		C2CDBA6D213CD1DA006A5355 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29E0F24890A7166C7CFCAC88 /* Pods-SDKDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RD4GU69WG6;
+				INFOPLIST_FILE = SDKDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = one.fox.SDKDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C2CDBA6E213CD1DA006A5355 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06D76C23DACC914DC40D15FC /* Pods-SDKDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RD4GU69WG6;
+				INFOPLIST_FILE = SDKDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = one.fox.SDKDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C2CDBA6F213CD1DA006A5355 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RD4GU69WG6;
+				INFOPLIST_FILE = SDKDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = one.fox.SDKDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SDKDemo.app/SDKDemo";
+			};
+			name = Debug;
+		};
+		C2CDBA70213CD1DA006A5355 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RD4GU69WG6;
+				INFOPLIST_FILE = SDKDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = one.fox.SDKDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SDKDemo.app/SDKDemo";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -627,6 +932,24 @@
 			buildConfigurations = (
 				C2B35AC02138227B0072B077 /* Debug */,
 				C2B35AC12138227B0072B077 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2CDBA71213CD1DA006A5355 /* Build configuration list for PBXNativeTarget "SDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2CDBA6D213CD1DA006A5355 /* Debug */,
+				C2CDBA6E213CD1DA006A5355 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2CDBA72213CD1DA006A5355 /* Build configuration list for PBXNativeTarget "SDKDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2CDBA6F213CD1DA006A5355 /* Debug */,
+				C2CDBA70213CD1DA006A5355 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
