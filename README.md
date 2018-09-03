@@ -37,7 +37,7 @@ pod 'CryptoSwift'
 Run `pod install` 
 
 
-## Using Open SDK
+## Using Open SDK in your APP
 
 1. Request API Key
 
