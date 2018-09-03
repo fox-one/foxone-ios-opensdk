@@ -1,6 +1,4 @@
-# foxone-ios-opensdk
-
-Fox.ONE Open SDK in Swift
+# Fox.ONE Open SDK in Swift
 
 Integrate your app with Fox.One open SDK, Including: 
 
