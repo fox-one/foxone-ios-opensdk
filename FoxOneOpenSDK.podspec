@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.license      = "Apache License 2.0"
   s.author             = { "moubuns" => "mengwl@fox.one" }
   s.ios.deployment_target = "9.0"
-  s.source       = { :git => "git@github.com:fox-one/foxone-ios-opensdk.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/fox-one/foxone-ios-opensdk.git", :tag => "#{s.version}" }
 
   s.source_files  = "opensdk/opensdk/**/*.swift"
   s.resources = "opensdk/opensdk/Resource/**/*.*"
