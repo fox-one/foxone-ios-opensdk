@@ -54,3 +54,5 @@ CryptoSwift
                 }
             }
     ```
+# API 
+   [API](https://github.com/fox-one/foxone-ios-opensdk/blob/master/API.md)
