@@ -45,25 +45,26 @@ Run `pod install`
 2. Register SDK in App
      
     ```
+    //import SDK
     import FoxOneOpenSDK
     
     //Register
     OpenSDK.setDelegate(self)
     ```
-3. implement SDK Delegate
+3. Implement SDK Delegate
 
     ```
     
-     //set your token
+     //Set your Access Token
      func f1AccessToken() -> String {
             return AccountManager.shared.user?.token ?? ""
         }
-      
+     //Config Pin Crypto method
      func f1PublicKey() -> String {
             return PinManager.shared.appConfig.crypto.publicKey
         }
     ```
-4. Invoke SDK Service
+4. API SDK Service
   
     ```  
     OpenSDKService.getAssets { completion in
