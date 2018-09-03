@@ -1,4 +1,5 @@
 # foxone-ios-opensdk
+
 Fox.ONE Open SDK in Swift
 
 Integrate your app with Fox.One open SDK, Including: 
@@ -9,7 +10,7 @@ Integrate your app with Fox.One open SDK, Including:
 * Transation Record
 * PIN
 
-# Installation    
+## Installation    
 ### CocoaPods
 
 Make sure you are running the latest version of [CocoaPods](https://cocoapods.org) by running:
@@ -36,7 +37,7 @@ pod 'CryptoSwift'
 Run `pod install` 
 
 
-# Using Open SDK
+## Using Open SDK
 
 1. Request API Key
 
@@ -74,6 +75,9 @@ Run `pod install`
                 }
             }
     ```
-# API 
+##  API 
     
-   [API](https://github.com/fox-one/foxone-ios-opensdk/blob/master/API.md)
+  - [API](https://github.com/fox-one/foxone-ios-opensdk/blob/master/API.md) - The OpenSDKService API
+
+## Give Feedback
+
