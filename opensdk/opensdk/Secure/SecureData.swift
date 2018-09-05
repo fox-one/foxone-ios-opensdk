@@ -14,11 +14,20 @@ struct SecureData: Codable {
     let key: String
     let time: Int = Int(Date().timeIntervalSince1970)
     let nonce: String = UUID().uuidString
-    
+
     enum CodingKeys: String, CodingKey {
         case key = "p"
         case time = "t"
         case nonce = "n"
+    }
+    
+    /// 生成PIN混淆之后的PinToken
+    ///
+    /// - Parameter pin: PIN
+    /// - Returns: PinToken
+    static func generateConfusionPinToken(pin: String) -> String {
+        let md5Pin = String(format: "fox.%@", pin).md5()
+        return md5Pin.rsaToken ?? ""
     }
 }
 
@@ -39,12 +48,12 @@ extension String {
             let publicKey = try PublicKey(pemEncoded: OpenSDK.shared.delegate?.f1PublicKey() ?? "")
             let clear = try ClearMessage(string: self, using: .utf8)
             let encrypted = try clear.encrypted(with: publicKey, padding: .OAEP)
-            #if DEBUG
+#if DEBUG
             print("====== Fox.One ======")
             print("pinToken= \(encrypted.base64String)")
             print("====== Fox.One ======")
-            #else
-            #endif
+#else
+#endif
 
             return encrypted.base64String
         } catch {

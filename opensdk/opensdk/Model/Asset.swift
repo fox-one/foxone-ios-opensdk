@@ -10,7 +10,6 @@ import Foundation
 
 /// 资产
 public struct Asset: Codable {
-    
     public let id: String
     public let balance: Double
     public let chainId: String
@@ -28,4 +27,5 @@ public struct Asset: Codable {
     public let accountTag: String
     public let chain: WalletCoin?
     public let coin: WalletCoin?
+    public let option: Option
 }

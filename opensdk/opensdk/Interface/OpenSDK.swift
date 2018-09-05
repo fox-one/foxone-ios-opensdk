@@ -7,62 +7,48 @@
 //
 
 import Foundation
-import UIKit
 
+@objc
 public protocol OpenSDKProtcol: NSObjectProtocol {
     /// AccessToken
     func f1AccessToken() -> String
     /// PIN加密使用的公钥匙
     func f1PublicKey() -> String
-    
-    /// PIN
-    func f1Pin() -> String
 
+    /// PIN
+    func f1PIN() -> String
+    
+    /// FoxOne API地址，选配
+    @objc optional func f1HostURLString() -> String
+    
+    /// FoxOne 定制请求Header，选配
+    @objc optional func f1HttpHeader() -> [String: String]
+}
+
+struct SDKConfig {
+    let defaultURLString = "https://ali-api.lyricwei.cn/api"
+    let sdkVerison = "0.0.2"
 }
 
 public final class OpenSDK {
     internal static let shared = OpenSDK()
-    internal let sdkverison: String = "0.0.1"
-    internal let hostURLString = "https://ali-api.lyricwei.cn/api"
+    internal let defalutConfig = SDKConfig()
+    
     internal var baseURL: String {
-        return hostURLString
+        guard let url = self.self.delegate?.f1HostURLString?() else {
+            return defalutConfig.defaultURLString
+        }
+        
+        return url
     }
 
+    internal var key: String?
+    
     internal weak var delegate: OpenSDKProtcol?
 
-    init() {}
     /// 注册OpenSDK
-    public static func setDelegate(_ delegate: OpenSDKProtcol) {
+    public static func registerSDK(key: String, delegate: OpenSDKProtcol) {
+        OpenSDK.shared.key = key
         OpenSDK.shared.delegate = delegate
-    }
-
-    /// 生成PIN混淆之后的PinToken
-    ///
-    /// - Parameter pin: PIN
-    /// - Returns: PinToken
-    public class func generateConfusionPinToken(pin: String) -> String {
-        let md5Pin = String(format: "fox.%@", pin).md5()
-        return md5Pin.rsaToken ?? ""
-    }
-    
-    /// 生成PIN未混淆的PinToken
-    ///
-    /// - Parameter pin: PIN
-    /// - Returns: PinToken
-    public class func generatePinToken(with pin: String) -> String {
-        return SecureData(key: pin).jsonString?.rsaToken ?? ""
-    }
-    
-    internal func httpHeader() -> [String: String] {
-        let buildVersion = "0"
-        let appVersion = self.sdkverison
-        let clientType = "5"
-        let uuid = UIDevice.current.identifierForVendor?.uuidString ?? ""
-        
-        return ["x-client-build": buildVersion,
-                                                     "x-client-type": clientType,
-                                                     "x-client-version": appVersion,
-                                                     "x-client-device-id": uuid
-            ]
     }
 }

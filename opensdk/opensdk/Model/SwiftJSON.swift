@@ -65,5 +65,12 @@ extension Asset: OpenSDKMappable {
         accountTag = jsonData["accountTag"].stringValue
         chain = WalletCoin(jsonData: jsonData["chain"])
         coin = WalletCoin(jsonData: jsonData["coin"])
+        option = Option(jsonData: jsonData["option"]) ?? Option(hide: false)
+    }
+}
+
+extension Option: OpenSDKMappable {
+    init?(jsonData: JSON) {
+        hide = jsonData["hide"].boolValue
     }
 }

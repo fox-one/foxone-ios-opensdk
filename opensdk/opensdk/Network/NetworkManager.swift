@@ -10,39 +10,15 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-class AccessTokenAdapter: RequestAdapter {
-    init() {}
-    
-    func adapt(_ urlRequest: URLRequest) throws -> URLRequest {
-        var urlRequest = urlRequest
-        
-        if let urlString = urlRequest.url?.absoluteString, urlString.hasPrefix(OpenSDK.shared.baseURL) {
-            let accessToken = OpenSDK.shared.delegate?.f1AccessToken() ?? ""
-            urlRequest.setValue("Bearer " + accessToken, forHTTPHeaderField: "Authorization")
-            
-            let header = OpenSDK.shared.httpHeader()
-            header.forEach { key, value in
-                urlRequest.setValue(value, forHTTPHeaderField: key)
-            }
-            
-            if let pin = OpenSDK.shared.delegate?.f1Pin() {
-                urlRequest.setValue(pin, forHTTPHeaderField: "fox-client-pin")
-            }
-        }
-        
-        return urlRequest
-    }
-}
-
 final class NetworkManager {
     static let shared = NetworkManager()
-    let sessionManager = SessionManager()
-   
+    private let sessionManager = SessionManager()
+
     init() {
-        sessionManager.adapter = AccessTokenAdapter()
+        sessionManager.adapter = RequestAuthAdapter()
     }
-    
-    open func request(api: OpenSDKAPI) -> DataRequest {
+
+    func request(api: OpenSDKAPI) -> DataRequest {
         return sessionManager
             .request(api.url,
                      method: api.method,
@@ -50,7 +26,9 @@ final class NetworkManager {
                      encoding: api.parameterEncoding,
                      headers: api.headers)
             .validate({ _, response, data -> Request.ValidationResult in
-                var acceptableStatusCodes: [Int] { return Array(200..<300) }
+                var acceptableStatusCodes: [Int] {
+                    return Array(200..<300)
+                }
                 if acceptableStatusCodes.contains(response.statusCode) {
                     return .success
                 } else {

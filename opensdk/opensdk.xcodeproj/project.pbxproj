@@ -10,18 +10,6 @@
 		5980331741590C7D07C28A70 /* libPods-FoxOneOpenSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B58549EEA0BCFB117164D60 /* libPods-FoxOneOpenSDK.a */; };
 		8059120FC06E9660182274A5 /* libPods-opensdkTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F2A7237B78E614469ACE1D /* libPods-opensdkTests.a */; };
 		B8FE1A28122F3554A4CAF202 /* libPods-SDKDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DB409070C39B542DDFE40DA /* libPods-SDKDemo.a */; };
-		C280076B213966030037B235 /* OpenSDKAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C280075D213966030037B235 /* OpenSDKAPI.swift */; };
-		C280076C213966030037B235 /* OpenSDKService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C280075F213966030037B235 /* OpenSDKService.swift */; };
-		C280076D213966030037B235 /* OpenSDKProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2800760213966030037B235 /* OpenSDKProvider.swift */; };
-		C280076E213966030037B235 /* OpenSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2800761213966030037B235 /* OpenSDK.swift */; };
-		C280076F213966030037B235 /* Fee.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2800763213966030037B235 /* Fee.swift */; };
-		C2800770213966030037B235 /* WalletCoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2800764213966030037B235 /* WalletCoin.swift */; };
-		C2800771213966030037B235 /* Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2800765213966030037B235 /* Snapshot.swift */; };
-		C2800772213966030037B235 /* SwiftJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2800766213966030037B235 /* SwiftJSON.swift */; };
-		C2800773213966030037B235 /* Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2800767213966030037B235 /* Lists.swift */; };
-		C2800774213966030037B235 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2800768213966030037B235 /* Asset.swift */; };
-		C2800775213966030037B235 /* SecureData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C280076A213966030037B235 /* SecureData.swift */; };
-		C2800777213966210037B235 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2800776213966210037B235 /* Network.swift */; };
 		C2B35AB22138227B0072B077 /* FoxOneOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2B35AA82138227B0072B077 /* FoxOneOpenSDK.framework */; };
 		C2B35AB72138227B0072B077 /* opensdkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B35AB62138227B0072B077 /* opensdkTests.swift */; };
 		C2B35AB92138227B0072B077 /* opensdk.h in Headers */ = {isa = PBXBuildFile; fileRef = C2B35AAB2138227B0072B077 /* opensdk.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -32,6 +20,21 @@
 		C2CDBA60213CD1DA006A5355 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2CDBA5E213CD1DA006A5355 /* LaunchScreen.storyboard */; };
 		C2CDBA6B213CD1DA006A5355 /* SDKDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CDBA6A213CD1DA006A5355 /* SDKDemoTests.swift */; };
 		C2CDBA7A213CD23B006A5355 /* OpenSDK.strings in Resources */ = {isa = PBXBuildFile; fileRef = C2CDBA77213CD23B006A5355 /* OpenSDK.strings */; };
+		C2F3684B213FC886001CFD49 /* OpenSDKAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F36838213FC886001CFD49 /* OpenSDKAPI.swift */; };
+		C2F3684C213FC886001CFD49 /* OpenSDKService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3683A213FC886001CFD49 /* OpenSDKService.swift */; };
+		C2F3684D213FC886001CFD49 /* OpenSDKError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3683B213FC886001CFD49 /* OpenSDKError.swift */; };
+		C2F3684E213FC886001CFD49 /* OpenSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3683C213FC886001CFD49 /* OpenSDK.swift */; };
+		C2F3684F213FC886001CFD49 /* Fee.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3683E213FC886001CFD49 /* Fee.swift */; };
+		C2F36850213FC886001CFD49 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3683F213FC886001CFD49 /* Option.swift */; };
+		C2F36851213FC886001CFD49 /* WalletCoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F36840213FC886001CFD49 /* WalletCoin.swift */; };
+		C2F36852213FC886001CFD49 /* Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F36841213FC886001CFD49 /* Snapshot.swift */; };
+		C2F36853213FC886001CFD49 /* SwiftJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F36842213FC886001CFD49 /* SwiftJSON.swift */; };
+		C2F36854213FC886001CFD49 /* Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F36843213FC886001CFD49 /* Lists.swift */; };
+		C2F36855213FC886001CFD49 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F36844213FC886001CFD49 /* Asset.swift */; };
+		C2F36856213FC886001CFD49 /* SecureData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F36846213FC886001CFD49 /* SecureData.swift */; };
+		C2F36857213FC886001CFD49 /* PinHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F36847213FC886001CFD49 /* PinHelper.swift */; };
+		C2F36858213FC886001CFD49 /* RequestAuthAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F36849213FC886001CFD49 /* RequestAuthAdapter.swift */; };
+		C2F36859213FC886001CFD49 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3684A213FC886001CFD49 /* NetworkManager.swift */; };
 		E9C7BF5F416F9D32DEB54829 /* libPods-opensdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9EA87C5EA4DCC3D6643E7E /* libPods-opensdk.a */; };
 /* End PBXBuildFile section */
 
@@ -62,18 +65,6 @@
 		4DB409070C39B542DDFE40DA /* libPods-SDKDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SDKDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F42B597AAFC63FA606AB207 /* Pods-FoxOneOpenSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoxOneOpenSDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoxOneOpenSDK/Pods-FoxOneOpenSDK.debug.xcconfig"; sourceTree = "<group>"; };
 		AFDCC16F67FD1FA651494A0F /* Pods-FoxOneOpenSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoxOneOpenSDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoxOneOpenSDK/Pods-FoxOneOpenSDK.release.xcconfig"; sourceTree = "<group>"; };
-		C280075D213966030037B235 /* OpenSDKAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenSDKAPI.swift; sourceTree = "<group>"; };
-		C280075F213966030037B235 /* OpenSDKService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenSDKService.swift; sourceTree = "<group>"; };
-		C2800760213966030037B235 /* OpenSDKProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenSDKProvider.swift; sourceTree = "<group>"; };
-		C2800761213966030037B235 /* OpenSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenSDK.swift; sourceTree = "<group>"; };
-		C2800763213966030037B235 /* Fee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fee.swift; sourceTree = "<group>"; };
-		C2800764213966030037B235 /* WalletCoin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletCoin.swift; sourceTree = "<group>"; };
-		C2800765213966030037B235 /* Snapshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Snapshot.swift; sourceTree = "<group>"; };
-		C2800766213966030037B235 /* SwiftJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftJSON.swift; sourceTree = "<group>"; };
-		C2800767213966030037B235 /* Lists.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lists.swift; sourceTree = "<group>"; };
-		C2800768213966030037B235 /* Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
-		C280076A213966030037B235 /* SecureData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureData.swift; sourceTree = "<group>"; };
-		C2800776213966210037B235 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Network.swift; path = opensdk/Network.swift; sourceTree = SOURCE_ROOT; };
 		C2B35AA82138227B0072B077 /* FoxOneOpenSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FoxOneOpenSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2B35AAB2138227B0072B077 /* opensdk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = opensdk.h; sourceTree = "<group>"; };
 		C2B35AAC2138227B0072B077 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -92,6 +83,21 @@
 		C2CDBA6C213CD1DA006A5355 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2CDBA78213CD23B006A5355 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/OpenSDK.strings"; sourceTree = "<group>"; };
 		C2CDBA79213CD23B006A5355 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/OpenSDK.strings; sourceTree = "<group>"; };
+		C2F36838213FC886001CFD49 /* OpenSDKAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenSDKAPI.swift; sourceTree = "<group>"; };
+		C2F3683A213FC886001CFD49 /* OpenSDKService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenSDKService.swift; sourceTree = "<group>"; };
+		C2F3683B213FC886001CFD49 /* OpenSDKError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenSDKError.swift; sourceTree = "<group>"; };
+		C2F3683C213FC886001CFD49 /* OpenSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenSDK.swift; sourceTree = "<group>"; };
+		C2F3683E213FC886001CFD49 /* Fee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fee.swift; sourceTree = "<group>"; };
+		C2F3683F213FC886001CFD49 /* Option.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
+		C2F36840213FC886001CFD49 /* WalletCoin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletCoin.swift; sourceTree = "<group>"; };
+		C2F36841213FC886001CFD49 /* Snapshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Snapshot.swift; sourceTree = "<group>"; };
+		C2F36842213FC886001CFD49 /* SwiftJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftJSON.swift; sourceTree = "<group>"; };
+		C2F36843213FC886001CFD49 /* Lists.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lists.swift; sourceTree = "<group>"; };
+		C2F36844213FC886001CFD49 /* Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
+		C2F36846213FC886001CFD49 /* SecureData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecureData.swift; sourceTree = "<group>"; };
+		C2F36847213FC886001CFD49 /* PinHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinHelper.swift; sourceTree = "<group>"; };
+		C2F36849213FC886001CFD49 /* RequestAuthAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestAuthAdapter.swift; sourceTree = "<group>"; };
+		C2F3684A213FC886001CFD49 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		C9458189222F937E4A79F284 /* Pods-opensdk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-opensdk.release.xcconfig"; path = "Pods/Target Support Files/Pods-opensdk/Pods-opensdk.release.xcconfig"; sourceTree = "<group>"; };
 		E4F2A7237B78E614469ACE1D /* libPods-opensdkTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-opensdkTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB9EA87C5EA4DCC3D6643E7E /* libPods-opensdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-opensdk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,46 +166,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C280075C213966030037B235 /* API */ = {
-			isa = PBXGroup;
-			children = (
-				C280075D213966030037B235 /* OpenSDKAPI.swift */,
-			);
-			path = API;
-			sourceTree = "<group>";
-		};
-		C280075E213966030037B235 /* Interface */ = {
-			isa = PBXGroup;
-			children = (
-				C280075F213966030037B235 /* OpenSDKService.swift */,
-				C2800760213966030037B235 /* OpenSDKProvider.swift */,
-				C2800761213966030037B235 /* OpenSDK.swift */,
-			);
-			path = Interface;
-			sourceTree = "<group>";
-		};
-		C2800762213966030037B235 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				C2800763213966030037B235 /* Fee.swift */,
-				C2800764213966030037B235 /* WalletCoin.swift */,
-				C2800765213966030037B235 /* Snapshot.swift */,
-				C2800766213966030037B235 /* SwiftJSON.swift */,
-				C2800767213966030037B235 /* Lists.swift */,
-				C2800768213966030037B235 /* Asset.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		C2800769213966030037B235 /* Secure */ = {
-			isa = PBXGroup;
-			children = (
-				C2800776213966210037B235 /* Network.swift */,
-				C280076A213966030037B235 /* SecureData.swift */,
-			);
-			path = Secure;
-			sourceTree = "<group>";
-		};
 		C2B35A9E2138227B0072B077 = {
 			isa = PBXGroup;
 			children = (
@@ -227,11 +193,12 @@
 		C2B35AAA2138227B0072B077 /* opensdk */ = {
 			isa = PBXGroup;
 			children = (
+				C2F36837213FC886001CFD49 /* API */,
+				C2F36839213FC886001CFD49 /* Interface */,
+				C2F3683D213FC886001CFD49 /* Model */,
+				C2F36848213FC886001CFD49 /* Network */,
+				C2F36845213FC886001CFD49 /* Secure */,
 				C2CDBA75213CD23B006A5355 /* Resource */,
-				C280075C213966030037B235 /* API */,
-				C280075E213966030037B235 /* Interface */,
-				C2800762213966030037B235 /* Model */,
-				C2800769213966030037B235 /* Secure */,
 				C2B35AAB2138227B0072B077 /* opensdk.h */,
 				C2B35AAC2138227B0072B077 /* Info.plist */,
 			);
@@ -275,6 +242,56 @@
 				C2CDBA77213CD23B006A5355 /* OpenSDK.strings */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		C2F36837213FC886001CFD49 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				C2F36838213FC886001CFD49 /* OpenSDKAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		C2F36839213FC886001CFD49 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				C2F3683A213FC886001CFD49 /* OpenSDKService.swift */,
+				C2F3683B213FC886001CFD49 /* OpenSDKError.swift */,
+				C2F3683C213FC886001CFD49 /* OpenSDK.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		C2F3683D213FC886001CFD49 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C2F3683E213FC886001CFD49 /* Fee.swift */,
+				C2F3683F213FC886001CFD49 /* Option.swift */,
+				C2F36840213FC886001CFD49 /* WalletCoin.swift */,
+				C2F36841213FC886001CFD49 /* Snapshot.swift */,
+				C2F36842213FC886001CFD49 /* SwiftJSON.swift */,
+				C2F36843213FC886001CFD49 /* Lists.swift */,
+				C2F36844213FC886001CFD49 /* Asset.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C2F36845213FC886001CFD49 /* Secure */ = {
+			isa = PBXGroup;
+			children = (
+				C2F36846213FC886001CFD49 /* SecureData.swift */,
+				C2F36847213FC886001CFD49 /* PinHelper.swift */,
+			);
+			path = Secure;
+			sourceTree = "<group>";
+		};
+		C2F36848213FC886001CFD49 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C2F36849213FC886001CFD49 /* RequestAuthAdapter.swift */,
+				C2F3684A213FC886001CFD49 /* NetworkManager.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -534,18 +551,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2800777213966210037B235 /* Network.swift in Sources */,
-				C280076E213966030037B235 /* OpenSDK.swift in Sources */,
-				C2800773213966030037B235 /* Lists.swift in Sources */,
-				C2800771213966030037B235 /* Snapshot.swift in Sources */,
-				C2800774213966030037B235 /* Asset.swift in Sources */,
-				C2800775213966030037B235 /* SecureData.swift in Sources */,
-				C280076C213966030037B235 /* OpenSDKService.swift in Sources */,
-				C2800770213966030037B235 /* WalletCoin.swift in Sources */,
-				C2800772213966030037B235 /* SwiftJSON.swift in Sources */,
-				C280076B213966030037B235 /* OpenSDKAPI.swift in Sources */,
-				C280076F213966030037B235 /* Fee.swift in Sources */,
-				C280076D213966030037B235 /* OpenSDKProvider.swift in Sources */,
+				C2F3684E213FC886001CFD49 /* OpenSDK.swift in Sources */,
+				C2F36858213FC886001CFD49 /* RequestAuthAdapter.swift in Sources */,
+				C2F36854213FC886001CFD49 /* Lists.swift in Sources */,
+				C2F36852213FC886001CFD49 /* Snapshot.swift in Sources */,
+				C2F36855213FC886001CFD49 /* Asset.swift in Sources */,
+				C2F36856213FC886001CFD49 /* SecureData.swift in Sources */,
+				C2F3684C213FC886001CFD49 /* OpenSDKService.swift in Sources */,
+				C2F36857213FC886001CFD49 /* PinHelper.swift in Sources */,
+				C2F36851213FC886001CFD49 /* WalletCoin.swift in Sources */,
+				C2F36853213FC886001CFD49 /* SwiftJSON.swift in Sources */,
+				C2F3684F213FC886001CFD49 /* Fee.swift in Sources */,
+				C2F3684D213FC886001CFD49 /* OpenSDKError.swift in Sources */,
+				C2F36859213FC886001CFD49 /* NetworkManager.swift in Sources */,
+				C2F36850213FC886001CFD49 /* Option.swift in Sources */,
+				C2F3684B213FC886001CFD49 /* OpenSDKAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

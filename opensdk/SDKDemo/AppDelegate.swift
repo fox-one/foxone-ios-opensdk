@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        OpenSDK.setDelegate(self)
+        OpenSDK.registerSDK(key: "", delegate: self)
         return true
     }
 }
@@ -29,8 +29,8 @@ extension AppDelegate: OpenSDKProtcol {
         return ""
     }
     
-    func f1Pin() -> String {
-        return ""
+    func f1PIN() -> String {
+        return  ""
     }
     
 }
