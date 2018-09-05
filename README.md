@@ -20,16 +20,10 @@ gem install cocoapods
 sudo gem install cocoapods
 ```
 
-**Note:** This step is optional, if you updated the specs repo recently.
-
 Add the following lines to your Podfile:
 
 ```ruby
 pod 'FoxOneOpenSDK'
-pod 'Alamofire'
-pod 'SwiftyJSON'
-pod 'SwiftyRSA'
-pod 'CryptoSwift'
 ```
 
 Run `pod install` 
@@ -38,33 +32,38 @@ Run `pod install`
 ## Using Open SDK in your APP
 
 1. Request API Key
-
+   
     
 2. Register SDK in App
      
-    ```
+    ```swift
     //import SDK
     import FoxOneOpenSDK
     
     //Register
-    OpenSDK.setDelegate(self)
+    OpenSDK.registerSDK(key: "key", delegate: self)
     ```
 3. Implement SDK Delegate
 
-    ```
-    
-     //Set your Access Token
-     func f1AccessToken() -> String {
-            return AccountManager.shared.user?.token ?? ""
+    ```swift
+  extension AppDelegate: OpenSDKProtcol {
+        //session token 
+        func f1AccessToken() -> String {
+            return ""
         }
-     //Config Pin Crypto method
-     func f1PublicKey() -> String {
-            return PinManager.shared.appConfig.crypto.publicKey
+        
+        func f1PublicKey() -> String {
+            return ""
         }
+        
+        func f1PIN() -> String {
+            return  ""
+        }
+    }
     ```
 4. API SDK Service
   
-    ```  
+    ```swift  
     OpenSDKService.getAssets { completion in
                 switch completion {
                 case .success(let assets):
@@ -80,3 +79,4 @@ Run `pod install`
 
 ## Give Feedback
 
+mengwl@fox.one
