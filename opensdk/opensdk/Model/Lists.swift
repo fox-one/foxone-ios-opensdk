@@ -11,10 +11,12 @@ import SwiftyJSON
 
 class Lists<T: OpenSDKMappable> {
     let items: [T]
+    let pagination: PagInation
 
     required init?(jsonData: JSON, key: String) {
         self.items = jsonData[key].arrayValue.compactMap {
             T(jsonData: $0)
         }
+        self.pagination = PagInation(jsonData: jsonData["pagination"]) ?? PagInation()
     }
 }

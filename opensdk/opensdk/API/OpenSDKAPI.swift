@@ -13,7 +13,7 @@ enum OpenSDKAPI {
     case assets
     case asset(id: String)
     case snapshots(cursor: String, limit: Int)
-    case snapshot(id: String)
+    case snapshot(id: String, cursor: String, limit: Int)
     case withdraw(id: String, address: String, amount: String, memo: String, label: String)
     case fee(id: String, address: String, label: String)
     case supportAssets
@@ -69,8 +69,8 @@ enum OpenSDKAPI {
         switch self {
         case .snapshots(let cursor, let limit):
             return ["cursor": cursor,"limit": limit]
-        case .snapshot(let id):
-            return ["assetId": id]
+        case .snapshot(let id, let cursor, let limit):
+            return ["assetId": id, "cursor": cursor,"limit": limit]
         case .withdraw(let id, let address, let amount, let memo, let label):
             var param: [String: Any] = ["publicKey": address, "amount": amount, "assetId": id, "memo": memo]
             if !label.isEmpty {
