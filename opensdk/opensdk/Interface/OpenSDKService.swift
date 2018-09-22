@@ -112,8 +112,8 @@ public final class OpenSDKService {
     /// - Parameter completion: 结果回调，交易记录或者错误
     /// - Returns: 返回请求体
     @discardableResult
-    public class func getSnapshots(completion: @escaping (Result<[Snapshot]>) -> Void) -> DataRequest {
-        return NetworkManager.shared.request(api: OpenSDKAPI.snapshots)
+    public class func getSnapshots(cursor: String, limit: Int, completion: @escaping (Result<[Snapshot]>) -> Void) -> DataRequest {
+        return NetworkManager.shared.request(api: OpenSDKAPI.snapshots(cursor: cursor, limit: limit))
                 .responseData(completionHandler: { response in
                     switch response.result {
                     case .success(let data):
