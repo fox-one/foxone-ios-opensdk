@@ -9,7 +9,7 @@
 import UIKit
 import SwiftyJSON
 
-public struct PagInation: OpenSDKMappable {
+public struct PageInfo: OpenSDKMappable {
     
     let nextCursor: String
     let hasNext: Bool

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5980331741590C7D07C28A70 /* libPods-FoxOneOpenSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B58549EEA0BCFB117164D60 /* libPods-FoxOneOpenSDK.a */; };
-		764DA11D2155EF5000670663 /* PagInation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764DA11C2155EF5000670663 /* PagInation.swift */; };
+		764DA11D2155EF5000670663 /* PageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764DA11C2155EF5000670663 /* PageInfo.swift */; };
 		8059120FC06E9660182274A5 /* libPods-opensdkTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F2A7237B78E614469ACE1D /* libPods-opensdkTests.a */; };
 		B8FE1A28122F3554A4CAF202 /* libPods-SDKDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DB409070C39B542DDFE40DA /* libPods-SDKDemo.a */; };
 		C2B35AB22138227B0072B077 /* FoxOneOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2B35AA82138227B0072B077 /* FoxOneOpenSDK.framework */; };
@@ -64,7 +64,7 @@
 		3867C264AABC57458CBD190B /* Pods-opensdkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-opensdkTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-opensdkTests/Pods-opensdkTests.release.xcconfig"; sourceTree = "<group>"; };
 		4B58549EEA0BCFB117164D60 /* libPods-FoxOneOpenSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FoxOneOpenSDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DB409070C39B542DDFE40DA /* libPods-SDKDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SDKDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		764DA11C2155EF5000670663 /* PagInation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagInation.swift; sourceTree = "<group>"; };
+		764DA11C2155EF5000670663 /* PageInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageInfo.swift; sourceTree = "<group>"; };
 		8F42B597AAFC63FA606AB207 /* Pods-FoxOneOpenSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoxOneOpenSDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoxOneOpenSDK/Pods-FoxOneOpenSDK.debug.xcconfig"; sourceTree = "<group>"; };
 		AFDCC16F67FD1FA651494A0F /* Pods-FoxOneOpenSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoxOneOpenSDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoxOneOpenSDK/Pods-FoxOneOpenSDK.release.xcconfig"; sourceTree = "<group>"; };
 		C2B35AA82138227B0072B077 /* FoxOneOpenSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FoxOneOpenSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -274,7 +274,7 @@
 				C2F36842213FC886001CFD49 /* SwiftJSON.swift */,
 				C2F36843213FC886001CFD49 /* Lists.swift */,
 				C2F36844213FC886001CFD49 /* Asset.swift */,
-				764DA11C2155EF5000670663 /* PagInation.swift */,
+				764DA11C2155EF5000670663 /* PageInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -559,7 +559,7 @@
 				C2F36854213FC886001CFD49 /* Lists.swift in Sources */,
 				C2F36852213FC886001CFD49 /* Snapshot.swift in Sources */,
 				C2F36855213FC886001CFD49 /* Asset.swift in Sources */,
-				764DA11D2155EF5000670663 /* PagInation.swift in Sources */,
+				764DA11D2155EF5000670663 /* PageInfo.swift in Sources */,
 				C2F36856213FC886001CFD49 /* SecureData.swift in Sources */,
 				C2F3684C213FC886001CFD49 /* OpenSDKService.swift in Sources */,
 				C2F36857213FC886001CFD49 /* PinHelper.swift in Sources */,
