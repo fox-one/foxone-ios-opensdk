@@ -80,7 +80,7 @@ public final class OpenSDKService {
                             completion(Result.failure(ErrorCode.dataError))
                             return
                         }
-                        completion(Result.success((mappedObject.items, mappedObject.pagination)))
+                        completion(Result.success((snapshots: mappedObject.items, pagination: mappedObject.pagination)))
                     case .failure(let error):
                         completion(Result.failure(error))
                     }
@@ -122,7 +122,7 @@ public final class OpenSDKService {
                             completion(Result.failure(ErrorCode.dataError))
                             return
                         }
-                        completion(Result.success((mappedObject.items, mappedObject.pagination)))
+                        completion(Result.success((snapshots: mappedObject.items, pagination: mappedObject.pagination)))
                     case .failure(let error):
                         completion(Result.failure(error))
                     }
