@@ -11,8 +11,8 @@ import SwiftyJSON
 
 public struct PageInfo: OpenSDKMappable {
     
-    let nextCursor: String
-    let hasNext: Bool
+    public let nextCursor: String
+    public let hasNext: Bool
     
     init?(jsonData: JSON) {
         nextCursor = jsonData["nextCursor"].stringValue
