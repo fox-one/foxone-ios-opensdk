@@ -36,7 +36,6 @@
 		C2F36857213FC886001CFD49 /* PinHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F36847213FC886001CFD49 /* PinHelper.swift */; };
 		C2F36858213FC886001CFD49 /* RequestAuthAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F36849213FC886001CFD49 /* RequestAuthAdapter.swift */; };
 		C2F36859213FC886001CFD49 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3684A213FC886001CFD49 /* NetworkManager.swift */; };
-		E9C7BF5F416F9D32DEB54829 /* libPods-opensdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9EA87C5EA4DCC3D6643E7E /* libPods-opensdk.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,7 +109,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9C7BF5F416F9D32DEB54829 /* libPods-opensdk.a in Frameworks */,
 				5980331741590C7D07C28A70 /* libPods-FoxOneOpenSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,7 +391,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = FoxOne;
 				TargetAttributes = {
 					C2B35AA72138227B0072B077 = {
@@ -646,6 +644,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -700,6 +699,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -709,6 +709,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -756,6 +757,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -786,7 +788,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -814,7 +816,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = one.fox.opensdk;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -834,7 +836,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = one.fox.opensdkTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -854,7 +856,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = one.fox.opensdkTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -874,7 +876,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = one.fox.SDKDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -894,7 +896,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = one.fox.SDKDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -914,7 +916,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = one.fox.SDKDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SDKDemo.app/SDKDemo";
 			};
@@ -935,7 +937,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = one.fox.SDKDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SDKDemo.app/SDKDemo";
 			};
