@@ -12,8 +12,8 @@ import Alamofire
 enum OpenSDKAPI {
     case assets
     case asset(id: String)
-    case snapshots
-    case snapshot(id: String)
+    case snapshots(cursor: String, limit: Int)
+    case snapshot(id: String, cursor: String, limit: Int)
     case withdraw(id: String, address: String, amount: String, memo: String, label: String)
     case fee(id: String, address: String, label: String)
     case supportAssets
@@ -67,8 +67,10 @@ enum OpenSDKAPI {
 
     var parameters: Parameters? {
         switch self {
-        case .snapshot(let id):
-            return ["assetId": id]
+        case .snapshots(let cursor, let limit):
+            return ["cursor": cursor,"limit": limit]
+        case .snapshot(let id, let cursor, let limit):
+            return ["assetId": id, "cursor": cursor,"limit": limit]
         case .withdraw(let id, let address, let amount, let memo, let label):
             var param: [String: Any] = ["publicKey": address, "amount": amount, "assetId": id, "memo": memo]
             if !label.isEmpty {
@@ -82,7 +84,7 @@ enum OpenSDKAPI {
             }
             return param
         case .supportAssets:
-            return ["mainchain": "1"]
+            return ["entirechain": "1"]
         case .setPin(let newPinToken, let type):
             return ["pinType": type, "newPinToken": newPinToken]
         case .changePin(_, let newPinToken, let type):
