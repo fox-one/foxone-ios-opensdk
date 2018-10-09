@@ -22,6 +22,7 @@ enum OpenSDKAPI {
     case validatePin(pinToken: String)
     case hideAsset(id: String)
     case showAsset(id: String)
+    case currency
 
     var path: String {
         switch self {
@@ -49,6 +50,8 @@ enum OpenSDKAPI {
             return "/wallet/asset/hide"
         case .showAsset:
             return "/wallet/asset/hide"
+        case .currency:
+            return "/trade-data/currency"
         }
     }
 

@@ -36,6 +36,7 @@
 		C2F36857213FC886001CFD49 /* PinHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F36847213FC886001CFD49 /* PinHelper.swift */; };
 		C2F36858213FC886001CFD49 /* RequestAuthAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F36849213FC886001CFD49 /* RequestAuthAdapter.swift */; };
 		C2F36859213FC886001CFD49 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3684A213FC886001CFD49 /* NetworkManager.swift */; };
+		C2FF52C1216C4F8C00CAFD7A /* Opponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FF52C0216C4F8C00CAFD7A /* Opponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		C2F36847213FC886001CFD49 /* PinHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinHelper.swift; sourceTree = "<group>"; };
 		C2F36849213FC886001CFD49 /* RequestAuthAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestAuthAdapter.swift; sourceTree = "<group>"; };
 		C2F3684A213FC886001CFD49 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		C2FF52C0216C4F8C00CAFD7A /* Opponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Opponent.swift; sourceTree = "<group>"; };
 		C9458189222F937E4A79F284 /* Pods-opensdk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-opensdk.release.xcconfig"; path = "Pods/Target Support Files/Pods-opensdk/Pods-opensdk.release.xcconfig"; sourceTree = "<group>"; };
 		E4F2A7237B78E614469ACE1D /* libPods-opensdkTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-opensdkTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB9EA87C5EA4DCC3D6643E7E /* libPods-opensdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-opensdk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -273,6 +275,7 @@
 				C2F36843213FC886001CFD49 /* Lists.swift */,
 				C2F36844213FC886001CFD49 /* Asset.swift */,
 				764DA11C2155EF5000670663 /* PageInfo.swift */,
+				C2FF52C0216C4F8C00CAFD7A /* Opponent.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -552,6 +555,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2FF52C1216C4F8C00CAFD7A /* Opponent.swift in Sources */,
 				C2F3684E213FC886001CFD49 /* OpenSDK.swift in Sources */,
 				C2F36858213FC886001CFD49 /* RequestAuthAdapter.swift in Sources */,
 				C2F36854213FC886001CFD49 /* Lists.swift in Sources */,

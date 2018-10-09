@@ -27,14 +27,21 @@ extension Snapshot: OpenSDKMappable {
     public init?(jsonData: JSON) {
         amount = jsonData["amount"].doubleValue
         assetId = jsonData["assetId"].stringValue
-        coinId = jsonData["coinId"].intValue
-        counterUserId = jsonData["counterUserId"].stringValue
         insideMixin = jsonData["insideMixin"].boolValue
-        createdAt = jsonData["createdAt"].intValue
+        createdAt = jsonData["createdAt"].doubleValue
         memo = jsonData["memo"].stringValue
         snapshotId = jsonData["snapshotId"].stringValue
         traceId = jsonData["traceId"].stringValue
         transactionHash = jsonData["transactionHash"].stringValue
+        
+        opponentId = jsonData["opponentId"].stringValue
+        receiver = jsonData["receiver"].stringValue
+        sender = jsonData["sender"].stringValue
+        source = jsonData["source"].stringValue
+        userId = jsonData["userId"].stringValue
+        
+        opponent = Opponent(jsonData: jsonData["opponent"])
+        asset = Asset(jsonData: jsonData["asset"])
     }
 }
 
@@ -72,5 +79,15 @@ extension Asset: OpenSDKMappable {
 extension Option: OpenSDKMappable {
     init?(jsonData: JSON) {
         hide = jsonData["hide"].boolValue
+    }
+}
+
+
+extension Opponent: OpenSDKMappable {
+    init?(jsonData: JSON) {
+        foxId = jsonData["foxId"].intValue
+        mixinId = jsonData["mixinId"].stringValue
+        avatar = jsonData["avatar"].stringValue
+        fullname = jsonData["fullname"].stringValue
     }
 }
