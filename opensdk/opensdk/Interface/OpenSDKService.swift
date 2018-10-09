@@ -128,6 +128,31 @@ public final class OpenSDKService {
                     }
                 })
     }
+    
+    /// 获取指定交易记录Id的交易记录
+    /// （必须在OPENSDK的接口中传入PIN）
+    ///
+    /// - Parameters:
+    ///   - id: 资产ID
+    ///   - completion: 结果回调，交易记录或者错误
+    /// - Returns: 返回请求体
+    @discardableResult
+    public class func getSnapshot(with id: String, completion: @escaping (Result<Snapshot>) -> Void) -> DataRequest {
+        return NetworkManager.shared.request(api: OpenSDKAPI.getSnapshot(id: id))
+            .responseData(completionHandler: { response in
+                switch response.result {
+                case .success(let data):
+                    let json = JSON(data)["data"]
+                    guard let mappedObject = Snapshot(jsonData: json["snapshot"]) else {
+                        completion(Result.failure(ErrorCode.dataError))
+                        return
+                    }
+                    completion(Result.success(mappedObject))
+                case .failure(let error):
+                    completion(Result.failure(error))
+                }
+            })
+    }
 
     /// 获取钱包支持资产的列表
     /// （必须在OPENSDK的接口中传入PIN）

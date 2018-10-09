@@ -14,6 +14,7 @@ enum OpenSDKAPI {
     case asset(id: String)
     case snapshots(cursor: String, limit: Int)
     case snapshot(id: String, cursor: String, limit: Int)
+    case getSnapshot(id: String)
     case withdraw(id: String, address: String, amount: String, memo: String, label: String)
     case fee(id: String, address: String, label: String)
     case supportAssets
@@ -32,6 +33,8 @@ enum OpenSDKAPI {
             return "/wallet/assets/\(assetId)"
         case .snapshots:
             return "/wallet/snapshots"
+        case .getSnapshot(let snapshotId):
+            return "/wallet/snapshots/\(snapshotId)"
         case .snapshot:
             return "/wallet/snapshots"
         case .withdraw:
