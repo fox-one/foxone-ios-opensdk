@@ -283,7 +283,7 @@ extension DataRequest {
                 }
 
             case .failure(let error):
-                completion(Result.failure(ErrorCode.dataError))
+                completion(Result.failure(error))
             }
         })
     }
