@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "FoxOneOpenSDK"
-  s.version      = "0.0.2"
+  s.version      = "1.0.0"
   s.summary      = "FoxOne Open SDK"
 
   s.description  = "FoxOne Open SDK for iOS"
@@ -13,10 +13,10 @@ Pod::Spec.new do |s|
 
   s.source_files  = "opensdk/opensdk/**/*.swift"
   s.resources = "opensdk/opensdk/Resource/**/*.*"
-  s.swift_version = "4.1"
+  s.swift_version = "4.2"
   s.requires_arc = true
-  s.dependency "Alamofire", "~> 4.7"
-  s.dependency "SwiftyJSON", "~> 4.0"
+  s.dependency "Alamofire" 
+  s.dependency "SwiftyJSON"
   s.dependency "SwiftyRSA"
   s.dependency "CryptoSwift"
 
