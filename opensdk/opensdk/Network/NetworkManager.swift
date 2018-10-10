@@ -29,6 +29,7 @@ final class NetworkManager {
                 var acceptableStatusCodes: [Int] {
                     return Array(200..<300)
                 }
+                
                 if acceptableStatusCodes.contains(response.statusCode) {
                     return .success
                 } else {

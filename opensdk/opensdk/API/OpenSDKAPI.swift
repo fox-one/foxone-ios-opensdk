@@ -74,9 +74,9 @@ enum OpenSDKAPI {
     var parameters: Parameters? {
         switch self {
         case .snapshots(let cursor, let limit):
-            return ["cursor": cursor,"limit": limit]
+            return ["cursor": cursor, "limit": limit]
         case .snapshot(let id, let cursor, let limit):
-            return ["assetId": id, "cursor": cursor,"limit": limit]
+            return ["assetId": id, "cursor": cursor, "limit": limit]
         case .withdraw(let id, let address, let amount, let memo, let label):
             var param: [String: Any] = ["publicKey": address, "amount": amount, "assetId": id, "memo": memo]
             if !label.isEmpty {

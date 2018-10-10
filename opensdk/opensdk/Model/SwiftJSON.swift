@@ -33,13 +33,13 @@ extension Snapshot: OpenSDKMappable {
         snapshotId = jsonData["snapshotId"].stringValue
         traceId = jsonData["traceId"].stringValue
         transactionHash = jsonData["transactionHash"].stringValue
-        
+
         opponentId = jsonData["opponentId"].stringValue
         receiver = jsonData["receiver"].stringValue
         sender = jsonData["sender"].stringValue
         source = jsonData["source"].stringValue
         userId = jsonData["userId"].stringValue
-        
+
         opponent = Opponent(jsonData: jsonData["opponent"])
         asset = Asset(jsonData: jsonData["asset"])
     }
@@ -89,5 +89,29 @@ extension Opponent: OpenSDKMappable {
         mixinId = jsonData["mixinId"].stringValue
         avatar = jsonData["avatar"].stringValue
         fullname = jsonData["fullname"].stringValue
+    }
+}
+
+extension CNYTicker: OpenSDKMappable {
+    init?(jsonData: JSON) {
+        changeIn24h = jsonData["changeIn24h"].stringValue
+        from = jsonData["from"].stringValue
+        price = jsonData["price"].stringValue
+        timestamp = jsonData["timestamp"].doubleValue
+        to = jsonData["to"].stringValue
+    }
+}
+
+extension Currency: OpenSDKMappable {
+    init?(jsonData: JSON) {
+        bitcny = jsonData["bitcny"].stringValue
+        usdt = jsonData["usdt"].stringValue
+    }
+}
+
+extension CurrenyInfo: OpenSDKMappable {
+    init?(jsonData: JSON) {
+        currency = Currency(jsonData: jsonData["currencies"])
+        cnyTickers = jsonData["cnyTickers"].arrayValue.compactMap { CNYTicker(jsonData: $0) }
     }
 }

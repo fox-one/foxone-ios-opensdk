@@ -17,33 +17,33 @@ public protocol OpenSDKProtcol: NSObjectProtocol {
 
     /// PIN
     func f1PIN() -> String
-    
+
     /// FoxOne API地址，选配
     @objc optional func f1HostURLString() -> String
-    
+
     /// FoxOne 定制请求Header，选配
     @objc optional func f1HttpHeader() -> [String: String]
 }
 
 struct SDKConfig {
     let defaultURLString = "https://ali-api.lyricwei.cn/api"
-    let sdkVerison = "0.0.2"
+    let sdkVerison = "1.0.0"
 }
 
 public final class OpenSDK {
     internal static let shared = OpenSDK()
     internal let defalutConfig = SDKConfig()
-    
+
     internal var baseURL: String {
         guard let url = self.self.delegate?.f1HostURLString?() else {
             return defalutConfig.defaultURLString
         }
-        
+
         return url
     }
 
     internal var key: String?
-    
+
     internal weak var delegate: OpenSDKProtcol?
 
     /// 注册OpenSDK

@@ -128,7 +128,7 @@ public final class OpenSDKService {
                     }
                 })
     }
-    
+
     /// 获取指定交易记录Id的交易记录
     /// （必须在OPENSDK的接口中传入PIN）
     ///
@@ -139,19 +139,19 @@ public final class OpenSDKService {
     @discardableResult
     public class func getSnapshot(with id: String, completion: @escaping (Result<Snapshot>) -> Void) -> DataRequest {
         return NetworkManager.shared.request(api: OpenSDKAPI.getSnapshot(id: id))
-            .responseData(completionHandler: { response in
-                switch response.result {
-                case .success(let data):
-                    let json = JSON(data)["data"]
-                    guard let mappedObject = Snapshot(jsonData: json["snapshot"]) else {
-                        completion(Result.failure(ErrorCode.dataError))
-                        return
+                .responseData(completionHandler: { response in
+                    switch response.result {
+                    case .success(let data):
+                        let json = JSON(data)["data"]
+                        guard let mappedObject = Snapshot(jsonData: json["snapshot"]) else {
+                            completion(Result.failure(ErrorCode.dataError))
+                            return
+                        }
+                        completion(Result.success(mappedObject))
+                    case .failure(let error):
+                        completion(Result.failure(error))
                     }
-                    completion(Result.success(mappedObject))
-                case .failure(let error):
-                    completion(Result.failure(error))
-                }
-            })
+                })
     }
 
     /// 获取钱包支持资产的列表
@@ -318,7 +318,10 @@ public final class OpenSDKService {
                         let json = JSON(data)["data"]
                         let statusCode = json["code"].intValue
                         if statusCode == 0 {
+                            
                             completion(Result.success(()))
+                            
+                            
                         } else {
                             completion(Result.failure(ErrorCode.dataError))
                         }
@@ -327,5 +330,45 @@ public final class OpenSDKService {
                         completion(Result.failure(error))
                     }
                 })
+    }
+    
+    /// 获取汇率
+    ///
+    /// - Parameter completion: 汇率信息
+    /// - Returns: 返回请求体
+    @discardableResult
+    public class func getCurrency(completion: @escaping (Result<CurrenyInfo>) -> Void) -> DataRequest {
+        return NetworkManager.shared
+            .request(api: OpenSDKAPI.currency)
+            .hanleEnvelopResponseData(completion: completion,
+                                      handler: { json -> (Result<CurrenyInfo>) in
+                                        guard let currenyInfo = CurrenyInfo(jsonData: json) else {
+                                            return Result.failure(ErrorCode.dataError)
+                                        }
+                                        return Result.success(currenyInfo)
+            })
+    }
+}
+
+
+extension DataRequest {
+    @discardableResult
+    public func hanleEnvelopResponseData<T>(completion: @escaping ((Result<T>) -> Void), handler: @escaping (JSON) -> (Result<T>)) -> Self {
+        return responseData(queue: nil, completionHandler: { response in
+            switch response.result {
+            case .success(let data):
+                let json = JSON(data)["data"]
+                let statusCode = json["code"].intValue
+                if statusCode == 0 {
+                    completion(handler(json))
+                } else {
+                    completion(Result.failure(ErrorCode.dataError))
+                }
+                
+            case .failure(let error):
+                completion(Result.failure(ErrorCode.dataError))
+            }
+        })
+        
     }
 }
