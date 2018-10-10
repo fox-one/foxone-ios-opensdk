@@ -20,20 +20,12 @@ public final class OpenSDKService {
     @discardableResult
     public class func getAssets(completion: @escaping (Result<[Asset]>) -> Void) -> DataRequest {
         return NetworkManager.shared.request(api: OpenSDKAPI.assets)
-                .responseData { response in
-                    switch response.result {
-                    case .success(let data):
-                        let json = JSON(data)["data"]
-                        guard let mappedObject = Lists<Asset>(jsonData: json, key: "assets") else {
-                            completion(Result.failure(ErrorCode.dataError))
-                            return
-                        }
-                        completion(Result.success(mappedObject.items))
-                    case .failure(let error):
-                        completion(Result.failure(error))
+                .hanleEnvelopResponseData(completion: completion, handler: { json -> (Result<[Asset]>) in
+                    guard let mappedObject = Lists<Asset>(jsonData: json, key: "assets") else {
+                        return Result.failure(ErrorCode.dataError)
                     }
-                }
-
+                    return Result.success(mappedObject.items)
+                })
     }
 
     /// 获取指定的数字资产
@@ -46,20 +38,14 @@ public final class OpenSDKService {
     @discardableResult
     public class func getAsset(with id: String, completion: @escaping (Result<Asset>) -> Void) -> DataRequest {
         return NetworkManager.shared.request(api: OpenSDKAPI.asset(id: id))
-                .responseData(completionHandler: { response in
-                    switch response.result {
-                    case .success(let data):
-                        let json = JSON(data)["data"]
-                        guard let mappedObject = Asset(jsonData: json["asset"]) else {
-                            completion(Result.failure(ErrorCode.dataError))
-                            return
-                        }
-
-                        completion(Result.success(mappedObject))
-                    case .failure(let error):
-                        completion(Result.failure(error))
+                .hanleEnvelopResponseData(completion: completion, handler: { json -> (Result<Asset>) in
+                    guard let mappedObject = Asset(jsonData: json["asset"]) else {
+                        return Result.failure(ErrorCode.dataError)
                     }
+
+                    return Result.success(mappedObject)
                 })
+
     }
 
     /// 获取指定资产的交易记录
@@ -71,19 +57,13 @@ public final class OpenSDKService {
     /// - Returns: 返回请求体
     @discardableResult
     public class func getSnapshot(with id: String, cursor: String, limit: Int, completion: @escaping (Result<([Snapshot], PageInfo)>) -> Void) -> DataRequest {
-        return NetworkManager.shared.request(api: OpenSDKAPI.snapshot(id: id, cursor: cursor, limit: limit))
-                .responseData(completionHandler: { response in
-                    switch response.result {
-                    case .success(let data):
-                        let json = JSON(data)["data"]
-                        guard let mappedObject = Lists<Snapshot>(jsonData: json, key: "snapshots") else {
-                            completion(Result.failure(ErrorCode.dataError))
-                            return
-                        }
-                        completion(Result.success((snapshots: mappedObject.items, pagination: mappedObject.pagination)))
-                    case .failure(let error):
-                        completion(Result.failure(error))
+        return NetworkManager.shared
+                .request(api: OpenSDKAPI.snapshot(id: id, cursor: cursor, limit: limit))
+                .hanleEnvelopResponseData(completion: completion, handler: { json -> (Result<([Snapshot], PageInfo)>) in
+                    guard let mappedObject = Lists<Snapshot>(jsonData: json, key: "snapshots") else {
+                        return Result.failure(ErrorCode.dataError)
                     }
+                    return Result.success((snapshots: mappedObject.items, pagination: mappedObject.pagination))
                 })
     }
 
@@ -113,19 +93,14 @@ public final class OpenSDKService {
     /// - Returns: 返回请求体
     @discardableResult
     public class func getSnapshots(cursor: String, limit: Int, completion: @escaping (Result<([Snapshot], PageInfo)>) -> Void) -> DataRequest {
-        return NetworkManager.shared.request(api: OpenSDKAPI.snapshots(cursor: cursor, limit: limit))
-                .responseData(completionHandler: { response in
-                    switch response.result {
-                    case .success(let data):
-                        let json = JSON(data)["data"]
-                        guard let mappedObject = Lists<Snapshot>(jsonData: json, key: "snapshots") else {
-                            completion(Result.failure(ErrorCode.dataError))
-                            return
-                        }
-                        completion(Result.success((snapshots: mappedObject.items, pagination: mappedObject.pagination)))
-                    case .failure(let error):
-                        completion(Result.failure(error))
+        return NetworkManager.shared
+                .request(api: OpenSDKAPI.snapshots(cursor: cursor, limit: limit))
+                .hanleEnvelopResponseData(completion: completion, handler: { json -> (Result<([Snapshot], PageInfo)>) in
+                    guard let mappedObject = Lists<Snapshot>(jsonData: json, key: "snapshots") else {
+                        return Result.failure(ErrorCode.dataError)
+
                     }
+                    return Result.success((snapshots: mappedObject.items, pagination: mappedObject.pagination))
                 })
     }
 
@@ -138,20 +113,16 @@ public final class OpenSDKService {
     /// - Returns: 返回请求体
     @discardableResult
     public class func getSnapshot(with id: String, completion: @escaping (Result<Snapshot>) -> Void) -> DataRequest {
-        return NetworkManager.shared.request(api: OpenSDKAPI.getSnapshot(id: id))
-                .responseData(completionHandler: { response in
-                    switch response.result {
-                    case .success(let data):
-                        let json = JSON(data)["data"]
-                        guard let mappedObject = Snapshot(jsonData: json["snapshot"]) else {
-                            completion(Result.failure(ErrorCode.dataError))
-                            return
-                        }
-                        completion(Result.success(mappedObject))
-                    case .failure(let error):
-                        completion(Result.failure(error))
+        return NetworkManager.shared
+                .request(api: OpenSDKAPI.getSnapshot(id: id))
+                .hanleEnvelopResponseData(completion: completion, handler: { json -> (Result<Snapshot>) in
+                    guard let mappedObject = Snapshot(jsonData: json["snapshot"]) else {
+                        return Result.failure(ErrorCode.dataError)
                     }
+
+                    return Result.success(mappedObject)
                 })
+
     }
 
     /// 获取钱包支持资产的列表
@@ -161,19 +132,13 @@ public final class OpenSDKService {
     /// - Returns: 返回请求体
     @discardableResult
     public class func getSupportAssets(completion: @escaping (Result<[Asset]>) -> Void) -> DataRequest {
-        return NetworkManager.shared.request(api: OpenSDKAPI.supportAssets)
-                .responseData(completionHandler: { response in
-                    switch response.result {
-                    case .success(let data):
-                        let json = JSON(data)["data"]
-                        guard let mappedObject = Lists<Asset>(jsonData: json, key: "assets") else {
-                            completion(Result.failure(ErrorCode.dataError))
-                            return
-                        }
-                        completion(Result.success(mappedObject.items))
-                    case .failure(let error):
-                        completion(Result.failure(error))
+        return NetworkManager.shared
+                .request(api: OpenSDKAPI.supportAssets)
+                .hanleEnvelopResponseData(completion: completion, handler: { json -> (Result<[Asset]>) in
+                    guard let mappedObject = Lists<Asset>(jsonData: json, key: "assets") else {
+                        return Result.failure(ErrorCode.dataError)
                     }
+                    return Result.success(mappedObject.items)
                 })
     }
 
@@ -195,19 +160,14 @@ public final class OpenSDKService {
                                memo: String,
                                label: String,
                                completion: @escaping (Result<Snapshot>) -> Void) -> DataRequest {
-        return NetworkManager.shared.request(api: OpenSDKAPI.withdraw(id: assetId, address: address, amount: amount, memo: memo, label: label))
-                .responseData(completionHandler: { response in
-                    switch response.result {
-                    case .success(let data):
-                        let json = JSON(data)["data"]
-                        guard let mappedObject = Snapshot(jsonData: json["snapshot"]) else {
-                            completion(Result.failure(ErrorCode.dataError))
-                            return
-                        }
-                        completion(Result.success(mappedObject))
-                    case .failure(let error):
-                        completion(Result.failure(error))
+        return NetworkManager.shared
+                .request(api: OpenSDKAPI.withdraw(id: assetId, address: address, amount: amount, memo: memo, label: label))
+                .hanleEnvelopResponseData(completion: completion, handler: { json -> (Result<Snapshot>) in
+                    guard let mappedObject = Snapshot(jsonData: json["snapshot"]) else {
+                        return Result.failure(ErrorCode.dataError)
                     }
+
+                    return Result.success(mappedObject)
                 })
     }
 
@@ -222,21 +182,16 @@ public final class OpenSDKService {
     /// - Returns: 返回请求体
     @discardableResult
     public class func getFee(by id: String, address: String, label: String, completion: @escaping (Result<Fee>) -> Void) -> DataRequest {
-        return NetworkManager.shared.request(api: OpenSDKAPI.fee(id: id, address: address, label: label))
-                .responseData(completionHandler: { response in
-                    switch response.result {
-                    case .success(let data):
-                        let json = JSON(data)["data"]
-                        guard let mappedObject = Fee(jsonData: json["fee"]) else {
-                            completion(Result.failure(ErrorCode.dataError))
-                            return
-                        }
-                        completion(Result.success(mappedObject))
-
-                    case .failure(let error):
-                        completion(Result.failure(error))
+        return NetworkManager.shared
+                .request(api: OpenSDKAPI.fee(id: id, address: address, label: label))
+                .hanleEnvelopResponseData(completion: completion, handler: { json -> (Result<Fee>) in
+                    guard let mappedObject = Fee(jsonData: json["fee"]) else {
+                        return Result.failure(ErrorCode.dataError)
                     }
+
+                    return Result.success(mappedObject)
                 })
+
     }
 
     /// 设置PIN
@@ -250,21 +205,10 @@ public final class OpenSDKService {
     @discardableResult
     public class func setPin(newPin: String, type: Int = 2, completion: @escaping (Result<Void>) -> Void) -> DataRequest {
         let newPinToken = SecureData.generateConfusionPinToken(pin: newPin)
-        return NetworkManager.shared.request(api: OpenSDKAPI.setPin(newPinToken: newPinToken, type: type))
-                .responseData(completionHandler: { response in
-                    switch response.result {
-                    case .success(let data):
-                        let json = JSON(data)["data"]
-                        let statusCode = json["code"].intValue
-                        if statusCode == 0 {
-                            completion(Result.success(()))
-                        } else {
-                            completion(Result.failure(ErrorCode.dataError))
-                        }
-
-                    case .failure(let error):
-                        completion(Result.failure(error))
-                    }
+        return NetworkManager.shared
+                .request(api: OpenSDKAPI.setPin(newPinToken: newPinToken, type: type))
+                .hanleEnvelopResponseData(completion: completion, handler: { json -> (Result<Void>) in
+                    return Result.success(())
                 })
     }
 
@@ -282,23 +226,11 @@ public final class OpenSDKService {
         let newPinToken = SecureData.generateConfusionPinToken(pin: newPin)
         let oldPinToken = PinHelper.generatePinToken(with: oldPin)
 
-        return NetworkManager.shared.request(api: OpenSDKAPI.changePin(oldPinToken: oldPinToken, newPinToken: newPinToken, type: type))
-                .responseData(completionHandler: { response in
-                    switch response.result {
-                    case .success(let data):
-                        let json = JSON(data)["data"]
-                        let statusCode = json["code"].intValue
-                        if statusCode == 0 {
-                            completion(Result.success(()))
-                        } else {
-                            completion(Result.failure(ErrorCode.dataError))
-                        }
-
-                    case .failure(let error):
-                        completion(Result.failure(error))
-                    }
+        return NetworkManager.shared
+                .request(api: OpenSDKAPI.changePin(oldPinToken: oldPinToken, newPinToken: newPinToken, type: type))
+                .hanleEnvelopResponseData(completion: completion, handler: { json -> (Result<Void>) in
+                    return Result.success(())
                 })
-
     }
 
     /// 校验PIN
@@ -311,27 +243,13 @@ public final class OpenSDKService {
     @discardableResult
     public class func validatePin(pin: String, completion: @escaping (Result<Void>) -> Void) -> DataRequest {
         let pinToken = PinHelper.generatePinToken(with: pin)
-        return NetworkManager.shared.request(api: OpenSDKAPI.validatePin(pinToken: pinToken))
-                .responseData(completionHandler: { response in
-                    switch response.result {
-                    case .success(let data):
-                        let json = JSON(data)["data"]
-                        let statusCode = json["code"].intValue
-                        if statusCode == 0 {
-                            
-                            completion(Result.success(()))
-                            
-                            
-                        } else {
-                            completion(Result.failure(ErrorCode.dataError))
-                        }
-
-                    case .failure(let error):
-                        completion(Result.failure(error))
-                    }
+        return NetworkManager.shared
+                .request(api: OpenSDKAPI.validatePin(pinToken: pinToken))
+                .hanleEnvelopResponseData(completion: completion, handler: { json -> (Result<Void>) in
+                    return Result.success(())
                 })
     }
-    
+
     /// 获取汇率
     ///
     /// - Parameter completion: 汇率信息
@@ -339,17 +257,16 @@ public final class OpenSDKService {
     @discardableResult
     public class func getCurrency(completion: @escaping (Result<CurrenyInfo>) -> Void) -> DataRequest {
         return NetworkManager.shared
-            .request(api: OpenSDKAPI.currency)
-            .hanleEnvelopResponseData(completion: completion,
-                                      handler: { json -> (Result<CurrenyInfo>) in
-                                        guard let currenyInfo = CurrenyInfo(jsonData: json) else {
-                                            return Result.failure(ErrorCode.dataError)
-                                        }
-                                        return Result.success(currenyInfo)
-            })
+                .request(api: OpenSDKAPI.currency)
+                .hanleEnvelopResponseData(completion: completion,
+                        handler: { json -> (Result<CurrenyInfo>) in
+                            guard let currenyInfo = CurrenyInfo(jsonData: json) else {
+                                return Result.failure(ErrorCode.dataError)
+                            }
+                            return Result.success(currenyInfo)
+                        })
     }
 }
-
 
 extension DataRequest {
     @discardableResult
@@ -364,11 +281,10 @@ extension DataRequest {
                 } else {
                     completion(Result.failure(ErrorCode.dataError))
                 }
-                
+
             case .failure(let error):
                 completion(Result.failure(ErrorCode.dataError))
             }
         })
-        
     }
 }
