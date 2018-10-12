@@ -1,4 +1,4 @@
-# Fox.ONE Open SDK in Swift
+# Fox.ONE Open SDK for Swift
 
 Integrate your app with Fox.One open SDK, Including: 
 
