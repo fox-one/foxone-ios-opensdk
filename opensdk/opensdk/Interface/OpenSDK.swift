@@ -27,7 +27,7 @@ public protocol OpenSDKProtcol: NSObjectProtocol {
 
 struct SDKConfig {
     let defaultURLString = "https://ali-api.lyricwei.cn/api"
-    let sdkVerison = "1.0.0"
+    let sdkVerison = "1.0.2"
 }
 
 public final class OpenSDK {
