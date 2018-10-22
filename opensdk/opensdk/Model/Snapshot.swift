@@ -15,6 +15,7 @@ import Foundation
 /// - withdrawal_initialized: 提现
 /// - withdrawal_fee_charged: 提现手续费
 /// - withdrawal_failed: 提现失败
+
 /// - o1_open_account: Ocean.ONE 账户开通
 /// - o1_put_order: Ocean.ONE 下单
 /// - o1_cancel_order: Ocean.ONE 撤单
@@ -34,6 +35,9 @@ public enum SnapshotType: String {
     case o1_order_refund = "O1_ORDER_REFUND"
     case o1_order_canceled = "O1_ORDER_CANCELED"
     case o1_order_matched = "O1_ORDER_MATCHED"
+    case fox_redpacket_pay = "FOX_REDPACKET_PAY"
+    case fox_redpacket_reward = "FOX_REDPACKET_REWARD"
+    case fox_redpacket_refund = "FOX_REDPACKET_REFUND"
 }
 
 /// 交易记录
