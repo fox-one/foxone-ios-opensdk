@@ -24,6 +24,7 @@ enum OpenSDKAPI {
     case hideAsset(id: String)
     case showAsset(id: String)
     case currency
+    case transfer(userId: String, assetId: String, memo: String, amount: String)
 
     var path: String {
         switch self {
@@ -55,12 +56,14 @@ enum OpenSDKAPI {
             return "/wallet/asset/hide"
         case .currency:
             return "/trade-data/currency"
+        case .transfer:
+            return "/wallet/transfer"
         }
     }
 
     var method: HTTPMethod {
         switch self {
-        case .withdraw, .hideAsset:
+        case .withdraw, .hideAsset, .transfer:
             return .post
         case .setPin, .validatePin, .changePin:
             return .put
@@ -97,6 +100,8 @@ enum OpenSDKAPI {
             return ["pinType": type, "newPinToken": newPinToken]
         case .showAsset(let id), .hideAsset(let id):
             return ["id": id]
+        case .transfer(let userId, let assetId, let memo, let amount):
+            return ["userId": userId, "assetId": assetId, "memo": memo, "amount": amount]
         default:
             return nil
         }

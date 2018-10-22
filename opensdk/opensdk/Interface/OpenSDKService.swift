@@ -170,6 +170,34 @@ public final class OpenSDKService {
                     return Result.success(mappedObject)
                 })
     }
+    
+    
+    /// 转账
+    /// （必须在OPENSDK的接口中传入PIN）
+    ///
+    /// - Parameters:
+    ///   - address: 接收用户ID
+    ///   - amount: 转账数量
+    ///   - assetId: 资产ID
+    ///   - memo: 备注
+    ///   - completion: 结果回调，返回交易记录或者错误
+    /// - Returns: 返回请求体
+    @discardableResult
+    public class func transfer(to userId: String,
+                               amount: String,
+                               assetId: String,
+                               memo: String,
+                               completion: @escaping (Result<Snapshot>) -> Void) -> DataRequest {
+        return NetworkManager.shared
+            .request(api: OpenSDKAPI.transfer(userId: userId, assetId: assetId, memo: memo, amount: amount))
+            .hanleEnvelopResponseData(completion: completion, handler: { json -> (Result<Snapshot>) in
+                guard let mappedObject = Snapshot(jsonData: json["snapshot"]) else {
+                    return Result.failure(ErrorCode.dataError)
+                }
+                
+                return Result.success(mappedObject)
+            })
+    }
 
     /// 获取转账手续费
     /// （必须在OPENSDK的接口中传入PIN）
