@@ -10,11 +10,11 @@ import Foundation
 import Alamofire
 
 let foxCustomPinHeader: String = "fox-client-pin"
+let foxCustomKeyHeader: String = "fox-client-key"
 
 class RequestAuthAdapter: RequestAdapter {
     func adapt(_ urlRequest: URLRequest) throws -> URLRequest {
         var urlRequest = urlRequest
-        
         if let urlString = urlRequest.url?.absoluteString, urlString.hasPrefix(OpenSDK.shared.baseURL) {
             if let accessToken = OpenSDK.shared.delegate?.f1AccessToken() {
                 urlRequest.setValue("Bearer " + accessToken, forHTTPHeaderField: "Authorization")

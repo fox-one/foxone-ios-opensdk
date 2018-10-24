@@ -32,6 +32,7 @@
 		C2CDBA60213CD1DA006A5355 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2CDBA5E213CD1DA006A5355 /* LaunchScreen.storyboard */; };
 		C2CDBA6B213CD1DA006A5355 /* SDKDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CDBA6A213CD1DA006A5355 /* SDKDemoTests.swift */; };
 		C2CDBA7A213CD23B006A5355 /* OpenSDK.strings in Resources */ = {isa = PBXBuildFile; fileRef = C2CDBA77213CD23B006A5355 /* OpenSDK.strings */; };
+		C2E88F332180743B0062EB06 /* InternalSDKConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E88F322180743B0062EB06 /* InternalSDKConfig.swift */; };
 		C2F3684B213FC886001CFD49 /* OpenSDKAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F36838213FC886001CFD49 /* OpenSDKAPI.swift */; };
 		C2F3684C213FC886001CFD49 /* OpenSDKService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3683A213FC886001CFD49 /* OpenSDKService.swift */; };
 		C2F3684D213FC886001CFD49 /* OpenSDKError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F3683B213FC886001CFD49 /* OpenSDKError.swift */; };
@@ -99,6 +100,7 @@
 		C2CDBA6C213CD1DA006A5355 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2CDBA78213CD23B006A5355 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/OpenSDK.strings"; sourceTree = "<group>"; };
 		C2CDBA79213CD23B006A5355 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/OpenSDK.strings; sourceTree = "<group>"; };
+		C2E88F322180743B0062EB06 /* InternalSDKConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalSDKConfig.swift; sourceTree = "<group>"; };
 		C2F36838213FC886001CFD49 /* OpenSDKAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenSDKAPI.swift; sourceTree = "<group>"; };
 		C2F3683A213FC886001CFD49 /* OpenSDKService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenSDKService.swift; sourceTree = "<group>"; };
 		C2F3683B213FC886001CFD49 /* OpenSDKError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenSDKError.swift; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 				C2F3683A213FC886001CFD49 /* OpenSDKService.swift */,
 				C2F3683B213FC886001CFD49 /* OpenSDKError.swift */,
 				C2F3683C213FC886001CFD49 /* OpenSDK.swift */,
+				C2E88F322180743B0062EB06 /* InternalSDKConfig.swift */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -575,6 +578,7 @@
 				C2146748216E037200CECBE1 /* CNYTicker.swift in Sources */,
 				C2F36857213FC886001CFD49 /* PinHelper.swift in Sources */,
 				C2F3684D213FC886001CFD49 /* OpenSDKError.swift in Sources */,
+				C2E88F332180743B0062EB06 /* InternalSDKConfig.swift in Sources */,
 				C2146747216E037200CECBE1 /* Fee.swift in Sources */,
 				C214674A216E037200CECBE1 /* Asset.swift in Sources */,
 				C214674C216E037200CECBE1 /* Snapshot.swift in Sources */,

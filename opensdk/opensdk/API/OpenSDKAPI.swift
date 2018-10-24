@@ -1,6 +1,6 @@
 //
 //  OpenSDKAPI.swift
-//  opensdk
+//  FoxOne
 //
 //  Created by moubuns on 2018/8/31.
 //  Copyright © 2018 FoxOne. All rights reserved.
@@ -10,6 +10,7 @@ import Foundation
 import Alamofire
 
 enum OpenSDKAPI {
+    case config
     case assets
     case asset(id: String)
     case snapshots(cursor: String, limit: Int)
@@ -28,6 +29,8 @@ enum OpenSDKAPI {
 
     var path: String {
         switch self {
+        case .config:
+            return "/config"
         case .assets:
             return "/wallet/assets"
         case .asset(let assetId):
@@ -122,6 +125,8 @@ enum OpenSDKAPI {
             return [foxCustomPinHeader: pinToken]
         case .validatePin(let pinToken):
             return [foxCustomPinHeader: pinToken]
+        case .config:
+            return [foxCustomKeyHeader: OpenSDK.shared.appKey ?? ""]
         default:
             guard let pin = OpenSDK.shared.delegate?.f1PIN() else {
                 return nil

@@ -12,11 +12,12 @@ import Foundation
 public protocol OpenSDKProtcol: NSObjectProtocol {
     /// AccessToken
     func f1AccessToken() -> String
-    /// PIN加密使用的公钥匙
-    func f1PublicKey() -> String
-
+    
     /// PIN
     func f1PIN() -> String
+    
+    /// PIN加密使用的公钥匙
+    @objc optional func f1PublicKey() -> String
 
     /// FoxOne API地址，选配
     @objc optional func f1HostURLString() -> String
@@ -25,30 +26,35 @@ public protocol OpenSDKProtcol: NSObjectProtocol {
     @objc optional func f1HttpHeader() -> [String: String]
 }
 
-struct SDKConfig {
-    let defaultURLString = "https://ali-api.lyricwei.cn/api"
-    let sdkVerison = "1.0.2"
-}
+
 
 public final class OpenSDK {
     internal static let shared = OpenSDK()
-    internal let defalutConfig = SDKConfig()
+    internal var defalutConfig = SDKConfig()
+    
+    internal var publicKey: String {
+        guard let pubKey = self.delegate?.f1PublicKey?() else {
+            return defalutConfig.env.defaultPublicKey
+        }
+        return pubKey
 
+    }
     internal var baseURL: String {
-        guard let url = self.self.delegate?.f1HostURLString?() else {
-            return defalutConfig.defaultURLString
+        guard let url = self.delegate?.f1HostURLString?() else {
+            return defalutConfig.env.serverApi
         }
 
         return url
     }
 
-    internal var key: String?
+    internal var appKey: String?
 
     internal weak var delegate: OpenSDKProtcol?
 
     /// 注册OpenSDK
-    public static func registerSDK(key: String, delegate: OpenSDKProtcol) {
-        OpenSDK.shared.key = key
+    public static func registerSDK(key: String, delegate: OpenSDKProtcol, env: SDKEnviroment = .product ) {
+        OpenSDK.shared.appKey = key
         OpenSDK.shared.delegate = delegate
+        OpenSDK.shared.defalutConfig.env = env
     }
 }

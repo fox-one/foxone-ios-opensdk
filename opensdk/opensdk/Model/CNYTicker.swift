@@ -1,6 +1,6 @@
 //
 //  CNYTicker.swift
-//  Pods
+//  FoxOne
 //
 //  Created by moubuns on 2018/10/10.
 //
