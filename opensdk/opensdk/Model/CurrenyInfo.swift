@@ -1,5 +1,8 @@
 //
-// Created by moubuns on 2018/10/10.
+//  CurrenyInfo.swift
+//  FoxOne
+//
+//  Created by moubuns on 2018/10/10.
 //
 
 import Foundation

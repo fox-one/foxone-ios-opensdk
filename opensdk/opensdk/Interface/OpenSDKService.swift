@@ -1,5 +1,5 @@
 //
-//  WalletService.swift
+//  OpenSDKService.swift
 //  FoxOne
 //
 //  Created by moubuns on 2018/6/26.
@@ -293,6 +293,26 @@ public final class OpenSDKService {
                             }
                             return Result.success(currenyInfo)
                         })
+    }
+    
+    /// 获取公钥
+    ///
+    /// - Parameter completion: 公钥
+    /// - Returns: 返回请求体
+    @discardableResult
+    class func getConfig(completion: @escaping (Result<String>) -> Void) -> DataRequest {
+        return NetworkManager.shared
+            .request(api: OpenSDKAPI.config)
+            .hanleEnvelopResponseData(completion: completion,
+                                      handler: { json -> (Result<String>) in
+                                        let publicKey = json["crypto"]["publicKey"].stringValue
+                                        if publicKey.isEmpty {
+                                            return Result.failure(ErrorCode.dataError)
+                                        } else {
+                                            return Result.success(publicKey)
+                                        }
+                                        
+            })
     }
 }
 

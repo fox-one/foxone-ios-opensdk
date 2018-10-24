@@ -15,17 +15,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        OpenSDK.registerSDK(key: "", delegate: self)
+        
+        OpenSDK.registerSDK(key: "0001", delegate: self, env: .dev)
+        
+
+        
+        
         return true
     }
 }
 
 extension AppDelegate: OpenSDKProtcol {
     func f1AccessToken() -> String {
-        return ""
-    }
-    
-    func f1PublicKey() -> String {
         return ""
     }
     
