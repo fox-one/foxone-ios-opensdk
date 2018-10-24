@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FoxOneOpenSDK
 
 class ViewController: UIViewController {
 

@@ -33,6 +33,6 @@ kwIDAQAB
 """
 
 struct SDKConfig {
-    let sdkVerison = "1.0.3"
+    let sdkVerison = "1.1.0"
     var env: SDKEnviroment = .product
 }
