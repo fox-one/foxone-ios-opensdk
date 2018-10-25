@@ -109,7 +109,7 @@ extension Currency: OpenSDKMappable {
     }
 }
 
-extension CurrenyInfo: OpenSDKMappable {
+extension CurrencyInfo: OpenSDKMappable {
     init?(jsonData: JSON) {
         currency = Currency(jsonData: jsonData["currencies"])
         cnyTickers = jsonData["cnyTickers"].arrayValue.compactMap { CNYTicker(jsonData: $0) }

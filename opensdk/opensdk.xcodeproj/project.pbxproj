@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		5980331741590C7D07C28A70 /* libPods-FoxOneOpenSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B58549EEA0BCFB117164D60 /* libPods-FoxOneOpenSDK.a */; };
+		7E6213182181C2CF0034EAF4 /* OpenSDKEnviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6213172181C2CF0034EAF4 /* OpenSDKEnviroment.swift */; };
+		7E62131A2181C3110034EAF4 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6213192181C3110034EAF4 /* Currency.swift */; };
+		7E62131C2181C31C0034EAF4 /* CurrencyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E62131B2181C31C0034EAF4 /* CurrencyInfo.swift */; };
 		8059120FC06E9660182274A5 /* libPods-opensdkTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F2A7237B78E614469ACE1D /* libPods-opensdkTests.a */; };
 		B8FE1A28122F3554A4CAF202 /* libPods-SDKDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DB409070C39B542DDFE40DA /* libPods-SDKDemo.a */; };
-		C2146742216E037200CECBE1 /* CurrenyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2146736216E037200CECBE1 /* CurrenyInfo.swift */; };
-		C2146743216E037200CECBE1 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2146737216E037200CECBE1 /* Currency.swift */; };
 		C2146744216E037200CECBE1 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2146738216E037200CECBE1 /* Option.swift */; };
 		C2146745216E037200CECBE1 /* WalletCoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2146739216E037200CECBE1 /* WalletCoin.swift */; };
 		C2146746216E037200CECBE1 /* Opponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C214673A216E037200CECBE1 /* Opponent.swift */; };
@@ -68,10 +69,11 @@
 		3867C264AABC57458CBD190B /* Pods-opensdkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-opensdkTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-opensdkTests/Pods-opensdkTests.release.xcconfig"; sourceTree = "<group>"; };
 		4B58549EEA0BCFB117164D60 /* libPods-FoxOneOpenSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FoxOneOpenSDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DB409070C39B542DDFE40DA /* libPods-SDKDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SDKDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E6213172181C2CF0034EAF4 /* OpenSDKEnviroment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenSDKEnviroment.swift; sourceTree = "<group>"; };
+		7E6213192181C3110034EAF4 /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		7E62131B2181C31C0034EAF4 /* CurrencyInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyInfo.swift; sourceTree = "<group>"; };
 		8F42B597AAFC63FA606AB207 /* Pods-FoxOneOpenSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoxOneOpenSDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoxOneOpenSDK/Pods-FoxOneOpenSDK.debug.xcconfig"; sourceTree = "<group>"; };
 		AFDCC16F67FD1FA651494A0F /* Pods-FoxOneOpenSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoxOneOpenSDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoxOneOpenSDK/Pods-FoxOneOpenSDK.release.xcconfig"; sourceTree = "<group>"; };
-		C2146736216E037200CECBE1 /* CurrenyInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrenyInfo.swift; sourceTree = "<group>"; };
-		C2146737216E037200CECBE1 /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		C2146738216E037200CECBE1 /* Option.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
 		C2146739216E037200CECBE1 /* WalletCoin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletCoin.swift; sourceTree = "<group>"; };
 		C214673A216E037200CECBE1 /* Opponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Opponent.swift; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 		C2F36839213FC886001CFD49 /* Interface */ = {
 			isa = PBXGroup;
 			children = (
+				7E6213172181C2CF0034EAF4 /* OpenSDKEnviroment.swift */,
 				C2F3683A213FC886001CFD49 /* OpenSDKService.swift */,
 				C2F3683B213FC886001CFD49 /* OpenSDKError.swift */,
 				C2F3683C213FC886001CFD49 /* OpenSDK.swift */,
@@ -278,8 +281,8 @@
 			children = (
 				C214673E216E037200CECBE1 /* Asset.swift */,
 				C214673C216E037200CECBE1 /* CNYTicker.swift */,
-				C2146737216E037200CECBE1 /* Currency.swift */,
-				C2146736216E037200CECBE1 /* CurrenyInfo.swift */,
+				7E62131B2181C31C0034EAF4 /* CurrencyInfo.swift */,
+				7E6213192181C3110034EAF4 /* Currency.swift */,
 				C214673B216E037200CECBE1 /* Fee.swift */,
 				C214673F216E037200CECBE1 /* Lists.swift */,
 				C214673A216E037200CECBE1 /* Opponent.swift */,
@@ -568,6 +571,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2F3684E213FC886001CFD49 /* OpenSDK.swift in Sources */,
+				7E6213182181C2CF0034EAF4 /* OpenSDKEnviroment.swift in Sources */,
 				C2146749216E037200CECBE1 /* SwiftJSON.swift in Sources */,
 				C214674D216E037200CECBE1 /* PageInfo.swift in Sources */,
 				C2F36858213FC886001CFD49 /* RequestAuthAdapter.swift in Sources */,
@@ -578,14 +582,14 @@
 				C2146748216E037200CECBE1 /* CNYTicker.swift in Sources */,
 				C2F36857213FC886001CFD49 /* PinHelper.swift in Sources */,
 				C2F3684D213FC886001CFD49 /* OpenSDKError.swift in Sources */,
+				7E62131C2181C31C0034EAF4 /* CurrencyInfo.swift in Sources */,
 				C2E88F332180743B0062EB06 /* InternalSDKConfig.swift in Sources */,
 				C2146747216E037200CECBE1 /* Fee.swift in Sources */,
+				7E62131A2181C3110034EAF4 /* Currency.swift in Sources */,
 				C214674A216E037200CECBE1 /* Asset.swift in Sources */,
 				C214674C216E037200CECBE1 /* Snapshot.swift in Sources */,
-				C2146743216E037200CECBE1 /* Currency.swift in Sources */,
 				C2146746216E037200CECBE1 /* Opponent.swift in Sources */,
 				C2F36859213FC886001CFD49 /* NetworkManager.swift in Sources */,
-				C2146742216E037200CECBE1 /* CurrenyInfo.swift in Sources */,
 				C2F3684B213FC886001CFD49 /* OpenSDKAPI.swift in Sources */,
 				C214674B216E037200CECBE1 /* Lists.swift in Sources */,
 			);
