@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct CurrenyInfo {
+public struct CurrencyInfo {
     public let cnyTickers: [CNYTicker]
     public let currency: Currency?
 }

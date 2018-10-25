@@ -1,7 +1,7 @@
 PODS:
   - Alamofire (4.7.3)
   - CryptoSwift (0.12.0)
-  - FoxOneOpenSDK (1.0.2):
+  - FoxOneOpenSDK (1.1.0):
     - Alamofire
     - CryptoSwift
     - SwiftyJSON
@@ -32,7 +32,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   CryptoSwift: 1c07ca50843dd48bc54e6ea53d7a4dba3b645716
-  FoxOneOpenSDK: 052e656ba82a536ee8493223c62890edeb71ed14
+  FoxOneOpenSDK: 299d371e7e42417c695f8484015fb3c5b72fd619
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
   SwiftyRSA: 6e528fb1b1a87d5111c48081083b141d6d65f1cf
 

@@ -226,7 +226,7 @@ public final class OpenSDKService {
     /// （必须在OPENSDK的接口中传入PIN）
     ///
     /// - Parameters:
-    ///   - newPinToken: PINToken
+    ///   - newPin: PIN
     ///   - type: Pin类型
     ///   - completion: 结果回调，返回手续费或者错误
     /// - Returns: 返回请求体
@@ -265,7 +265,7 @@ public final class OpenSDKService {
     /// （必须在OPENSDK的接口中传入PIN）
     ///
     /// - Parameters:
-    ///   - pinToken: PINToken
+    ///   - pin: PIN
     ///   - completion: 结果回调，返回成功或者错误
     /// - Returns: 返回请求体
     @discardableResult
@@ -283,12 +283,12 @@ public final class OpenSDKService {
     /// - Parameter completion: 汇率信息
     /// - Returns: 返回请求体
     @discardableResult
-    public class func getCurrency(completion: @escaping (Result<CurrenyInfo>) -> Void) -> DataRequest {
+    public class func getCurrency(completion: @escaping (Result<CurrencyInfo>) -> Void) -> DataRequest {
         return NetworkManager.shared
                 .request(api: OpenSDKAPI.currency)
                 .hanleEnvelopResponseData(completion: completion,
-                        handler: { json -> (Result<CurrenyInfo>) in
-                            guard let currenyInfo = CurrenyInfo(jsonData: json) else {
+                        handler: { json -> (Result<CurrencyInfo>) in
+                            guard let currenyInfo = CurrencyInfo(jsonData: json) else {
                                 return Result.failure(ErrorCode.dataError)
                             }
                             return Result.success(currenyInfo)
