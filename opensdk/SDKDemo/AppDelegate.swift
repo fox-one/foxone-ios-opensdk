@@ -18,9 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         OpenSDK.registerSDK(key: "0001", delegate: self, env: .dev)
         
-
-        
-        
         return true
     }
 }

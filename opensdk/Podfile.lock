@@ -1,12 +1,12 @@
 PODS:
   - Alamofire (4.7.3)
-  - CryptoSwift (0.12.0)
-  - FoxOneOpenSDK (1.1.0):
+  - CryptoSwift (0.13.0)
+  - FoxOneOpenSDK (1.2.1):
     - Alamofire
     - CryptoSwift
     - SwiftyJSON
     - SwiftyRSA
-  - SwiftyJSON (4.1.0)
+  - SwiftyJSON (4.2.0)
   - SwiftyRSA (1.5.0):
     - SwiftyRSA/ObjC (= 1.5.0)
   - SwiftyRSA/ObjC (1.5.0)
@@ -31,11 +31,11 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
-  CryptoSwift: 1c07ca50843dd48bc54e6ea53d7a4dba3b645716
-  FoxOneOpenSDK: 299d371e7e42417c695f8484015fb3c5b72fd619
-  SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
+  CryptoSwift: 16e78bebf567bad1c87b2d58f6547f25b74c31aa
+  FoxOneOpenSDK: 6c5ba99765933e0b21b18cd6112abbc7437579ef
+  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
   SwiftyRSA: 6e528fb1b1a87d5111c48081083b141d6d65f1cf
 
-PODFILE CHECKSUM: 1b3b201a01c55453e9a3a587415944bb0d541ad7
+PODFILE CHECKSUM: 9c17f04900ea1ca049c83533c3e9c91c9d49d60a
 
 COCOAPODS: 1.5.3
