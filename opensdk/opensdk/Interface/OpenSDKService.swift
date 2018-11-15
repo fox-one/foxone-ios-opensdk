@@ -314,6 +314,25 @@ public final class OpenSDKService {
                                         
             })
     }
+    
+    
+    /// 获取用户信息
+    ///
+    /// - Parameter completion: 用户
+    /// - Returns: 返回请求体
+    @discardableResult
+    public class func getUser(completion: @escaping (Result<User>) -> Void) -> DataRequest {
+        return NetworkManager.shared
+            .request(api: OpenSDKAPI.user)
+            .hanleEnvelopResponseData(completion: completion, handler: { json -> (Result<User>) in
+                guard let mappedObject = User(jsonData: json["user"]) else {
+                    return Result.failure(ErrorCode.dataError)
+                }
+                
+                return Result.success(mappedObject)
+            })
+        
+    }
 }
 
 extension DataRequest {

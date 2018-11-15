@@ -115,3 +115,15 @@ extension CurrencyInfo: OpenSDKMappable {
         cnyTickers = jsonData["cnyTickers"].arrayValue.compactMap { CNYTicker(jsonData: $0) }
     }
 }
+
+extension User: OpenSDKMappable {
+    init?(jsonData: JSON) {
+        id = jsonData["userId"].stringValue
+        avatar = jsonData["avatar"].stringValue
+        email = jsonData["email"].stringValue
+        name = jsonData["fullname"].stringValue
+        isActive = jsonData["isActive"].boolValue
+        isPinSet = jsonData["isPinSet"].boolValue
+        pinType = jsonData["pinType"].intValue
+    }
+}

@@ -26,6 +26,7 @@ enum OpenSDKAPI {
     case showAsset(id: String)
     case currency
     case transfer(userId: String, assetId: String, memo: String, amount: String)
+    case user
 
     var path: String {
         switch self {
@@ -61,6 +62,8 @@ enum OpenSDKAPI {
             return "/trade-data/currency"
         case .transfer:
             return "/wallet/transfer"
+        case .user:
+            return "/account/detail"
         }
     }
 

@@ -23,6 +23,16 @@ class ViewController: UIViewController {
                 break
             }
         }
+        
+        OpenSDKService.getUser { (completion) in
+            switch completion {
+            case .success(let user):
+                print(user)
+            case .failure(let error):
+                print(error)
+                break
+            }
+        }
     }
 }
 
