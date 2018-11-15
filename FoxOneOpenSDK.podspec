@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "FoxOneOpenSDK"
-  s.version      = "1.2.1"
+  s.version      = "1.3.0"
   s.summary      = "FoxOne Open SDK"
 
   s.description  = "FoxOne Open SDK for iOS"
